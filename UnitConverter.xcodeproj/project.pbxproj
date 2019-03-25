@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146A12672249781800CF4AED /* BrandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A12662249781800CF4AED /* BrandTextField.swift */; };
 		14781263224959A900AE8E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14781262224959A900AE8E56 /* AppDelegate.swift */; };
 		14781265224959A900AE8E56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14781264224959A900AE8E56 /* ViewController.swift */; };
 		14781268224959A900AE8E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14781266224959A900AE8E56 /* Main.storyboard */; };
 		1478126A224959AA00AE8E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14781269224959AA00AE8E56 /* Assets.xcassets */; };
 		1478126D224959AA00AE8E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1478126B224959AA00AE8E56 /* LaunchScreen.storyboard */; };
+		1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478127622496A7100AE8E56 /* WeightUnitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		146A12662249781800CF4AED /* BrandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTextField.swift; sourceTree = "<group>"; };
 		1478125F224959A900AE8E56 /* UnitConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14781262224959A900AE8E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14781264224959A900AE8E56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		14781269224959AA00AE8E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1478126C224959AA00AE8E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1478126E224959AA00AE8E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1478127622496A7100AE8E56 /* WeightUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146A1265224977AB00CF4AED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				146A12662249781800CF4AED /* BrandTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		14781256224959A900AE8E56 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +68,30 @@
 			children = (
 				14781262224959A900AE8E56 /* AppDelegate.swift */,
 				14781264224959A900AE8E56 /* ViewController.swift */,
+				146A1265224977AB00CF4AED /* Views */,
+				1478127522495AEF00AE8E56 /* Models */,
+				1478127422495ADB00AE8E56 /* Controllers */,
 				14781266224959A900AE8E56 /* Main.storyboard */,
 				14781269224959AA00AE8E56 /* Assets.xcassets */,
 				1478126B224959AA00AE8E56 /* LaunchScreen.storyboard */,
 				1478126E224959AA00AE8E56 /* Info.plist */,
 			);
 			path = UnitConverter;
+			sourceTree = "<group>";
+		};
+		1478127422495ADB00AE8E56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1478127622496A7100AE8E56 /* WeightUnitsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1478127522495AEF00AE8E56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +167,8 @@
 			files = (
 				14781265224959A900AE8E56 /* ViewController.swift in Sources */,
 				14781263224959A900AE8E56 /* AppDelegate.swift in Sources */,
+				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
+				146A12672249781800CF4AED /* BrandTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7849KG83AV;
 				INFOPLIST_FILE = UnitConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,8 +323,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sk.UnitConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7849KG83AV;
 				INFOPLIST_FILE = UnitConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,8 +341,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sk.UnitConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
