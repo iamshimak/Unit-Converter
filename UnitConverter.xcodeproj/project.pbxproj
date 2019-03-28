@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1421F688224C084E00D97EAB /* Equations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F687224C084E00D97EAB /* Equations.swift */; };
+		1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F689224C29DE00D97EAB /* KeyboardView.swift */; };
+		1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1421F685224C06CE00D97EAB /* KeyboardView.xib */; };
 		146A12672249781800CF4AED /* BrandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A12662249781800CF4AED /* BrandTextField.swift */; };
 		146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A1268224981B100CF4AED /* EquationsViewController.swift */; };
 		146A126C224982EF00CF4AED /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146A126B224982EF00CF4AED /* TabView.xib */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1421F685224C06CE00D97EAB /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		1421F687224C084E00D97EAB /* Equations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equations.swift; sourceTree = "<group>"; };
+		1421F689224C29DE00D97EAB /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		146A12662249781800CF4AED /* BrandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTextField.swift; sourceTree = "<group>"; };
 		146A1268224981B100CF4AED /* EquationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsViewController.swift; sourceTree = "<group>"; };
 		146A126B224982EF00CF4AED /* TabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
@@ -55,7 +61,9 @@
 			children = (
 				146A12662249781800CF4AED /* BrandTextField.swift */,
 				146A126B224982EF00CF4AED /* TabView.xib */,
+				1421F685224C06CE00D97EAB /* KeyboardView.xib */,
 				146A126D2249847800CF4AED /* TabView.swift */,
+				1421F689224C29DE00D97EAB /* KeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 		1478127522495AEF00AE8E56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1421F687224C084E00D97EAB /* Equations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,7 +141,6 @@
 				1E0BC3F6D7C6C684587E5EE1 /* Pods-UnitConverter.debug.xcconfig */,
 				27485D0727C884B8732658B8 /* Pods-UnitConverter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */,
 				1478126D224959AA00AE8E56 /* LaunchScreen.storyboard in Resources */,
 				1478126A224959AA00AE8E56 /* Assets.xcassets in Resources */,
 				146A126C224982EF00CF4AED /* TabView.xib in Resources */,
@@ -235,9 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14781265224959A900AE8E56 /* HomeViewController.swift in Sources */,
+				1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */,
 				14781263224959A900AE8E56 /* AppDelegate.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
 				146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */,
+				1421F688224C084E00D97EAB /* Equations.swift in Sources */,
 				146A126E2249847800CF4AED /* TabView.swift in Sources */,
 				146A12672249781800CF4AED /* BrandTextField.swift in Sources */,
 			);
