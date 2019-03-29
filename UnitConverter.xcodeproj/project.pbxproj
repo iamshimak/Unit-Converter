@@ -10,6 +10,7 @@
 		1414F026224EA8D9009F4E5F /* ViewTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F025224EA8D9009F4E5F /* ViewTags.swift */; };
 		1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F027224EAAFB009F4E5F /* UnitsViewController.swift */; };
 		1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02A224EAC41009F4E5F /* TextUtils.swift */; };
+		1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */; };
 		1421F688224C084E00D97EAB /* Equations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F687224C084E00D97EAB /* Equations.swift */; };
 		1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F689224C29DE00D97EAB /* KeyboardView.swift */; };
 		1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1421F685224C06CE00D97EAB /* KeyboardView.xib */; };
@@ -30,6 +31,7 @@
 		1414F025224EA8D9009F4E5F /* ViewTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTags.swift; sourceTree = "<group>"; };
 		1414F027224EAAFB009F4E5F /* UnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsViewController.swift; sourceTree = "<group>"; };
 		1414F02A224EAC41009F4E5F /* TextUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
+		1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationCollectionViewCell.swift; sourceTree = "<group>"; };
 		1421F685224C06CE00D97EAB /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		1421F687224C084E00D97EAB /* Equations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equations.swift; sourceTree = "<group>"; };
 		1421F689224C29DE00D97EAB /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				146A126D2249847800CF4AED /* TabView.swift */,
 				1421F689224C29DE00D97EAB /* KeyboardView.swift */,
 				1414F025224EA8D9009F4E5F /* ViewTags.swift */,
+				1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				1414F026224EA8D9009F4E5F /* ViewTags.swift in Sources */,
 				1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */,
 				1421F688224C084E00D97EAB /* Equations.swift in Sources */,
+				1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */,
 				146A126E2249847800CF4AED /* TabView.swift in Sources */,
 				1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */,
 				146A12672249781800CF4AED /* BrandTextField.swift in Sources */,

@@ -9,10 +9,12 @@
 import UIKit
 
 class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        super.setupKeyBoard(scrollView)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

@@ -16,6 +16,13 @@ class KeyboardView: UIView {
     var onSignKeyPressed: ((_ sign: Sign) -> Void)?
     var onNumberKeyPressed: ((_ number: Int, _ sign: Sign) -> Void)?
     
+    static var height: CGFloat {
+        get {
+            let width = UIScreen.main.bounds.width
+            return width - 50
+        }
+    }
+    
     private var currentSign: Sign = .positive
     
     enum Sign {

@@ -14,13 +14,9 @@ class UnitsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func setupKeyBoard(_ scrollView: UIScrollView) {
         keyboardView = KeyboardView.createKeyboardView()
         
         keyboardView.onNumberKeyPressed = { number, sign in
@@ -31,6 +27,12 @@ class UnitsViewController: UIViewController {
             self.onHideKeyPressed()
         }
         
+        scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
+        scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         UIApplication.shared.keyWindow!.addSubview(keyboardView)
     }
     
