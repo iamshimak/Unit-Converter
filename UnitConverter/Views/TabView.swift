@@ -10,21 +10,31 @@ import UIKit
 
 class TabView: UIView {
     
+    static let sharedInstance = createTabView()
+    
+    @IBOutlet weak var equationButton: UIButton!
+    @IBOutlet weak var constantsButton: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
+    
+    static func createTabView() -> TabView {
+        return Bundle.main.loadNibNamed("TabView", owner: self, options: nil)?.first as! TabView
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
     }
     
     private func setup() {
-        let view = Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)!.first as! UIView
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.frame = bounds
-        addSubview(view)
+        //addSubview(TabView.sharedInstance)
+    }
+    
+    func setupFrame(from view: UIView) {
+        self.frame = view.bounds
+        
     }
 
     /*

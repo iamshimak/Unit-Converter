@@ -11,6 +11,8 @@
 		1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F027224EAAFB009F4E5F /* UnitsViewController.swift */; };
 		1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02A224EAC41009F4E5F /* TextUtils.swift */; };
 		1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */; };
+		1414F02F224EC713009F4E5F /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02E224EC713009F4E5F /* BrandViewController.swift */; };
+		1414F031224ECEAB009F4E5F /* TabWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F030224ECEAB009F4E5F /* TabWrapperView.swift */; };
 		1421F688224C084E00D97EAB /* Equations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F687224C084E00D97EAB /* Equations.swift */; };
 		1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F689224C29DE00D97EAB /* KeyboardView.swift */; };
 		1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1421F685224C06CE00D97EAB /* KeyboardView.xib */; };
@@ -32,6 +34,8 @@
 		1414F027224EAAFB009F4E5F /* UnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsViewController.swift; sourceTree = "<group>"; };
 		1414F02A224EAC41009F4E5F /* TextUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
 		1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationCollectionViewCell.swift; sourceTree = "<group>"; };
+		1414F02E224EC713009F4E5F /* BrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
+		1414F030224ECEAB009F4E5F /* TabWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabWrapperView.swift; sourceTree = "<group>"; };
 		1421F685224C06CE00D97EAB /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		1421F687224C084E00D97EAB /* Equations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equations.swift; sourceTree = "<group>"; };
 		1421F689224C29DE00D97EAB /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 				146A126B224982EF00CF4AED /* TabView.xib */,
 				1421F685224C06CE00D97EAB /* KeyboardView.xib */,
 				146A126D2249847800CF4AED /* TabView.swift */,
+				1414F030224ECEAB009F4E5F /* TabWrapperView.swift */,
 				1421F689224C29DE00D97EAB /* KeyboardView.swift */,
 				1414F025224EA8D9009F4E5F /* ViewTags.swift */,
 				1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */,
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				1478127622496A7100AE8E56 /* WeightUnitsViewController.swift */,
+				1414F02E224EC713009F4E5F /* BrandViewController.swift */,
 				1414F027224EAAFB009F4E5F /* UnitsViewController.swift */,
 				14781264224959A900AE8E56 /* HomeViewController.swift */,
 				146A1268224981B100CF4AED /* EquationsViewController.swift */,
@@ -265,6 +271,7 @@
 			files = (
 				14781265224959A900AE8E56 /* HomeViewController.swift in Sources */,
 				1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */,
+				1414F02F224EC713009F4E5F /* BrandViewController.swift in Sources */,
 				14781263224959A900AE8E56 /* AppDelegate.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
 				146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */,
@@ -272,6 +279,7 @@
 				1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */,
 				1421F688224C084E00D97EAB /* Equations.swift in Sources */,
 				1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */,
+				1414F031224ECEAB009F4E5F /* TabWrapperView.swift in Sources */,
 				146A126E2249847800CF4AED /* TabView.swift in Sources */,
 				1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */,
 				146A12672249781800CF4AED /* BrandTextField.swift in Sources */,

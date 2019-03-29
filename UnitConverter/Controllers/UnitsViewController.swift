@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitsViewController: UIViewController {
+class UnitsViewController: BrandViewController {
     
     var keyboardView: KeyboardView!
 
@@ -33,7 +33,7 @@ class UnitsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIApplication.shared.keyWindow!.addSubview(keyboardView)
+        //UIApplication.shared.keyWindow!.addSubview(keyboardView)
     }
     
     func onNumberKeyPressed(number: Int, sign: KeyboardView.Sign) {
