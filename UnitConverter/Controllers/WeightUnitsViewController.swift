@@ -27,13 +27,17 @@ class WeightUnitsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        keyboardView = KeyboardView.createKeyboardView()
+        //keyboardView = KeyboardView.createKeyboardView()
         //TODO move to seperate function
-        keyboardView.onNumberKeyPressed = { number, sign in
-            print(number)
-        }
-        
-        UIApplication.shared.keyWindow!.addSubview(keyboardView)
+//        keyboardView.onNumberKeyPressed = { number, sign in
+//            print(number)
+//        }
+//
+//        UIApplication.shared.keyWindow!.addSubview(keyboardView)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("tag \(textField.tag) value \(textField.text ?? "")")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -56,35 +60,24 @@ class WeightUnitsViewController: UIViewController, UITextFieldDelegate {
     
     private func updateTextFieldValues(for tag: Int, value: Float) {
         //TODO check an easy way
-        var kgValue: Float = 0
-        if tag == ounceText {
-            kgValue = Equations.ounce(toKg: value)
-        } else if tag == poundText {
-            kgValue = Equations.pounds(toKg: value)
-        } else if tag == gramText {
-            kgValue = Equations.gram(toKg: value)
-        }
-        
-        for textFieldTag in textFieldTags {
-            if textFieldTag == tag {
-                continue
-            }
+        switch tag {
+        case ounceText:
+            var conValue = Equations.Weight.ounce(toPounds: value)
+            updateTextFieldValues(for: poundText, value: conValue)
             
-            var textFieldValue: Float = 0
-            switch textFieldTag {
-            case ounceText:
-                textFieldValue = Equations.kg(toOunce: kgValue)
-            case poundText:
-                textFieldValue = Equations.kg(toPounds: kgValue)
-            case gramText:
-                textFieldValue = Equations.kg(toGrams: kgValue)
-            default:
-                break
-            }
+            conValue = Equations.Weight.ounce(toKg: value)
+            updateTextFieldValues(for: kgText, value: conValue)
             
-            let textField : UITextField = self.view.viewWithTag(textFieldTag) as! UITextField
-            textField.text = String(describing: textFieldValue)
+            conValue = Equations.Weight.ounce(toGrams: value)
+            updateTextFieldValues(for: gramText, value: conValue)
+        default:
+            break
         }
+    }
+    
+    func updateTextFieldFor(tag: Int, value: Float) {
+        let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
+        textField.text = String(describing: value)
     }
     
 
