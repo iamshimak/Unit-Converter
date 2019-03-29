@@ -124,7 +124,23 @@
                     <view key="view" contentMode="scaleToFill" id="E7D-16-gDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5DG-FK-n4i">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dnk-fE-NoC" id="NO2-lF-uHo"/>
+                                    <outlet property="delegate" destination="Dnk-fE-NoC" id="bqp-wf-aZI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5DG-FK-n4i" firstAttribute="top" secondItem="D1s-Pb-5Rx" secondAttribute="top" id="6l0-6s-coO"/>
+                            <constraint firstItem="D1s-Pb-5Rx" firstAttribute="trailing" secondItem="5DG-FK-n4i" secondAttribute="trailing" id="eFB-uQ-KJk"/>
+                            <constraint firstItem="D1s-Pb-5Rx" firstAttribute="bottom" secondItem="5DG-FK-n4i" secondAttribute="bottom" id="gZi-zN-x2U"/>
+                            <constraint firstItem="5DG-FK-n4i" firstAttribute="leading" secondItem="D1s-Pb-5Rx" secondAttribute="leading" id="nbx-Jn-q5I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D1s-Pb-5Rx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Constants" id="TRZ-ym-HJo"/>
@@ -972,6 +988,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="rhN-nS-QbD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZlJ-RQ-BeV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

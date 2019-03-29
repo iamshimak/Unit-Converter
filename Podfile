@@ -6,5 +6,6 @@ target 'UnitConverter' do
   use_frameworks!
 
   # Pods for UnitConverter
+  pod 'iosMath'
 
 end
