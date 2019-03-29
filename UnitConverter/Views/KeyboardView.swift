@@ -40,7 +40,8 @@ class KeyboardView: UIView {
     func setup() {
         let width = UIScreen.main.bounds.width
         let height  = UIScreen.main.bounds.height
-        let modifieFframe = CGRect.init(x: 0, y: height - 350, width: width, height: 350)
+        let kbHeight = width - 50
+        let modifieFframe = CGRect.init(x: 0, y: height - kbHeight, width: width, height: kbHeight)
         self.frame = modifieFframe
     }
 

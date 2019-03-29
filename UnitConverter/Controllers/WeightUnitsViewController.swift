@@ -8,74 +8,70 @@
 
 import UIKit
 
-class WeightUnitsViewController: UIViewController, UITextFieldDelegate {
-    
-    let ounceText: Int = 1000
-    let poundText: Int = 1001
-    let kgText: Int = 1002
-    let gramText: Int = 1003
-    let stonesText: Int = 1004
-    
-    let textFieldTags: [Int] = [1000, 1001, 1002, 1003, 1004]
-    
-    var keyboardView: KeyboardView!
+class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //keyboardView = KeyboardView.createKeyboardView()
-        //TODO move to seperate function
-//        keyboardView.onNumberKeyPressed = { number, sign in
-//            print(number)
-//        }
-//
-//        UIApplication.shared.keyWindow!.addSubview(keyboardView)
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("tag \(textField.tag) value \(textField.text ?? "")")
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // TODO validations
-        let text: String
         let tag = textField.tag
-        
-        if let _text = textField.text, let _range = Range(range, in: _text) {
-            text = _text.replacingCharacters(in: _range, with: string)
-        } else {
-            text = string
-        }
-        
-        let numberFormatter = NumberFormatter()
-        let value = numberFormatter.number(from: text)?.floatValue ?? 0
-        updateTextFieldValues(for: tag, value: value)
+        let value = TextUtils.numberValue(for: textField.text, range: range, replaceString: string)
+        textfield(value: value, for: tag)
         
         return true
     }
     
-    private func updateTextFieldValues(for tag: Int, value: Float) {
+    private func textfield(value: Float,for tag: Int) {
         //TODO check an easy way
+        print("Value: \(value) Tag: \(tag)")
         switch tag {
-        case ounceText:
+        case ViewTags.Weight.ounceText:
             var conValue = Equations.Weight.ounce(toPounds: value)
-            updateTextFieldValues(for: poundText, value: conValue)
+            updateTextField(tag: ViewTags.Weight.poundText, value: conValue)
             
             conValue = Equations.Weight.ounce(toKg: value)
-            updateTextFieldValues(for: kgText, value: conValue)
+            updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
             
             conValue = Equations.Weight.ounce(toGrams: value)
-            updateTextFieldValues(for: gramText, value: conValue)
+            updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
+            
+        case ViewTags.Weight.poundText:
+            var conValue = Equations.Weight.pound(toOunce: value)
+            updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
+            
+            conValue = Equations.Weight.pound(toKg: value)
+            updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
+            
+            conValue = Equations.Weight.pound(toGram: value)
+            updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
+            
+        case ViewTags.Weight.kgText:
+            var conValue = Equations.Weight.kg(toOunce: value)
+            updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
+            
+            conValue = Equations.Weight.kg(toPounds: value)
+            updateTextField(tag: ViewTags.Weight.poundText, value: conValue)
+            
+            conValue = Equations.Weight.kg(toGrams: value)
+            updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
+        case ViewTags.Weight.gramText:
+            var conValue = Equations.Weight.gram(toOunce: value)
+            updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
+            
+            conValue = Equations.Weight.gram(toPound: value)
+            updateTextField(tag: ViewTags.Weight.poundText, value: conValue)
+            
+            conValue = Equations.Weight.gram(toKg: value)
+            updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
         default:
             break
         }
     }
     
-    func updateTextFieldFor(tag: Int, value: Float) {
+    func updateTextField(tag: Int, value: Float) {
         let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
         textField.text = String(describing: value)
     }
