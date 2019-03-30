@@ -21,10 +21,15 @@ class LengthUnitsViewController: UnitsViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         keyboardView.show()
+        keyboardView.textField(for: textField)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         keyboardView.hide()
+    }
+    
+    override func onNumberKeyPressed(number: Float, sign: KeyboardView.Sign, tag: Int) {
+        textfield(value: number, for: tag)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

@@ -15,11 +15,21 @@ class UnitsViewController: BrandViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItem()
+        setupKeyboardHide()
     }
     
     func setupNavigationItem() {
         let navigationItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(onSaveButtonPressed))
         self.navigationItem.rightBarButtonItem = navigationItem
+    }
+    
+    func setupKeyboardHide() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        keyboardView.hide()
     }
     
     @objc func onSaveButtonPressed() {

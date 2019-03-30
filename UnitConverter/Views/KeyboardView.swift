@@ -51,6 +51,7 @@ class KeyboardView: UIView {
         setup()
     }
     
+    // Initalize keyboard view
     func setup() {
         self.isHidden = true
         
@@ -69,12 +70,13 @@ class KeyboardView: UIView {
         selectedTextField = nil
     }
 
+    // Logic for get text from keyboard and pass to viewcontroller
     @IBAction func numberKey(_ sender: UIButton) {
         if let onNumberKeyPressed = onNumberKeyPressed,
             let key = sender.titleLabel!.text,
             let text = NumberFormatter().number(from: key) {
             if currentSign == .negative {
-                
+                //TODO negative value
             }
             onNumberKeyPressed(currentSign, text.floatValue, selectedTextField?.tag ?? -1)
             
