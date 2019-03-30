@@ -52,6 +52,26 @@ class UnitsViewController: BrandViewController {
         
     }
     
+    // MARK: - TextField helpers
+    
+    func updateTextField(tag: Int, value: Float) {
+        let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
+        textField.text = String(describing: value)
+    }
+    
+    func getTextFieldValue(from tag: Int) -> Float {
+        let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
+        
+        let value: Float
+        if let text = textField.text, let floatText = NumberFormatter().number(from: text) {
+            value = floatText.floatValue
+        } else {
+            value = 0.0
+        }
+        
+        return value
+    }
+    
 
     /*
     // MARK: - Navigation

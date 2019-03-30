@@ -33,6 +33,7 @@
 		14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442B224EE3B100762572 /* EquationTableViewCell.swift */; };
 		14B0442F224EE66100762572 /* iosMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442E224EE66100762572 /* iosMath.m */; };
 		14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */; };
+		14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */; };
 		89E3D2B60680E2833CEF4A0B /* Pods_UnitConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C816AC43AA82E9DF653E927B /* Pods_UnitConverter.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitConverter-Bridging-Header.h"; sourceTree = "<group>"; };
 		14B0442E224EE66100762572 /* iosMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosMath.m; sourceTree = "<group>"; };
 		14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnitsViewController.swift; sourceTree = "<group>"; };
 		1E0BC3F6D7C6C684587E5EE1 /* Pods-UnitConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.debug.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		27485D0727C884B8732658B8 /* Pods-UnitConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.release.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.release.xcconfig"; sourceTree = "<group>"; };
 		C816AC43AA82E9DF653E927B /* Pods_UnitConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 				14781264224959A900AE8E56 /* HomeViewController.swift */,
 				146A1268224981B100CF4AED /* EquationsViewController.swift */,
 				14B04429224EE1ED00762572 /* ConstantViewController.swift */,
+				14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */,
 				14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */,
 			);
 			path = Controllers;
@@ -336,6 +339,7 @@
 				1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */,
 				14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */,
 				146A12672249781800CF4AED /* BrandTextField.swift in Sources */,
+				14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */,
 				14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

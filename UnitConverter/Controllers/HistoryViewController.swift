@@ -26,6 +26,8 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         switch sender.selectedSegmentIndex {
         case 0:
             val = EquationsStoreManager.retrieve(object: Equations.Weight.self).equationDictionary
+        case 2:
+            val = EquationsStoreManager.retrieve(object: Equations.Length.self).equationDictionary
         default:
             break
         }
