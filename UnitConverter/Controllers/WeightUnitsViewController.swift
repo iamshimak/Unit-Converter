@@ -18,6 +18,8 @@ class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
         super.setupKeyBoard(scrollView)
     }
     
+    // MARK: Textfield Delegates
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // TODO validations
         let tag = textField.tag
@@ -77,6 +79,30 @@ class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
     func updateTextField(tag: Int, value: Float) {
         let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
         textField.text = String(describing: value)
+    }
+    
+    func getTextFieldValue(from tag: Int) -> Float {
+        let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
+        
+        let value: Float
+        if let text = textField.text, let floatText = NumberFormatter().number(from: text) {
+            value = floatText.floatValue
+        } else {
+            value = 0.0
+        }
+        
+        return value
+    }
+    
+    // MARK: Save model
+    
+    override func onSaveButtonPressed() {
+        let weightEquation = Equations.Weight(ounce: getTextFieldValue(from: ViewTags.Weight.ounceText),
+                                              pound: getTextFieldValue(from: ViewTags.Weight.poundText),
+                                              kg: getTextFieldValue(from: ViewTags.Weight.kgText),
+                                              gram: getTextFieldValue(from: ViewTags.Weight.gramText),
+                                              stone: getTextFieldValue(from: ViewTags.Weight.stonesText))
+        EquationsStoreManager.save(weightEquation)
     }
     
 

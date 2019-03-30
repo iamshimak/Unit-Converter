@@ -14,6 +14,16 @@ class UnitsViewController: BrandViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationItem()
+    }
+    
+    func setupNavigationItem() {
+        let navigationItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(onSaveButtonPressed))
+        self.navigationItem.rightBarButtonItem = navigationItem
+    }
+    
+    @objc func onSaveButtonPressed() {
+        
     }
     
     func setupKeyBoard(_ scrollView: UIScrollView) {

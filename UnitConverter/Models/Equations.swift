@@ -8,8 +8,23 @@
 
 import UIKit
 
-class Equations: NSObject {
-    class Weight {
+class Equations: Codable {
+    
+    class Weight: Codable {
+        let ounce: Float
+        let pound: Float
+        let kg: Float
+        let gram: Float
+        let stone: Float
+        
+        init(ounce: Float, pound: Float, kg: Float, gram: Float, stone: Float) {
+            self.ounce = ounce
+            self.pound = pound
+            self.kg = kg
+            self.gram = gram
+            self.stone = stone
+        }
+        
         //TODO stones
         static func ounce(toPounds value: Float) -> Float {
             return value / 16
@@ -59,4 +74,12 @@ class Equations: NSObject {
             return value / 1000
         }
     }
+    
+    class Length {
+        
+    }
 }
+
+//extension Equations.Weight {
+//
+//}
