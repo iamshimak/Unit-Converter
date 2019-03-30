@@ -21,6 +21,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         segmentedControl.sendActions(for: .valueChanged)
     }
     
+    // Retrieve object from UserDefaults and uodate current value
     @IBAction func onSegmentedValueChanged(_ sender: UISegmentedControl) {
         var val: [String:Float]?
         switch sender.selectedSegmentIndex {
