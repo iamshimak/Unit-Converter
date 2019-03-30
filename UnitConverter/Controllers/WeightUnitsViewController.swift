@@ -20,6 +20,14 @@ class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
     
     // MARK: Textfield Delegates
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        keyboardView.show()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        keyboardView.hide()
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // TODO validations
         let tag = textField.tag

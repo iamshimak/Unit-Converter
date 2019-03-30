@@ -28,6 +28,7 @@ class UnitsViewController: BrandViewController {
     
     func setupKeyBoard(_ scrollView: UIScrollView) {
         keyboardView = KeyboardView.createKeyboardView()
+        keyboardView.scrollView = scrollView
         
         keyboardView.onNumberKeyPressed = { number, sign in
             self.onNumberKeyPressed(number: number, sign: sign)
@@ -36,14 +37,11 @@ class UnitsViewController: BrandViewController {
         keyboardView.onHideKeyPressed = {
             self.onHideKeyPressed()
         }
-        
-        scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
-        scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //UIApplication.shared.keyWindow!.addSubview(keyboardView)
+        UIApplication.shared.keyWindow!.addSubview(keyboardView)
     }
     
     func onNumberKeyPressed(number: Int, sign: KeyboardView.Sign) {

@@ -10,11 +10,10 @@ import UIKit
 
 class KeyboardView: UIView {
     
-    var onClearKeynPressed: (() -> Void)?
-    var onClearAllKeyPressed: (() -> Void)?
-    var onHideKeyPressed: (() -> Void)?
-    var onSignKeyPressed: ((_ sign: Sign) -> Void)?
-    var onNumberKeyPressed: ((_ number: Int, _ sign: Sign) -> Void)?
+    enum Sign {
+        case positive
+        case negative
+    }
     
     static var height: CGFloat {
         get {
@@ -23,12 +22,18 @@ class KeyboardView: UIView {
         }
     }
     
-    private var currentSign: Sign = .positive
+    var onClearKeynPressed: (() -> Void)?
+    var onClearAllKeyPressed: (() -> Void)?
+    var onHideKeyPressed: (() -> Void)?
+    var onSignKeyPressed: ((_ sign: Sign) -> Void)?
+    var onNumberKeyPressed: ((_ number: Int, _ sign: Sign) -> Void)?
     
-    enum Sign {
-        case positive
-        case negative
-    }
+    var isOnDisplay = false
+    var isScrollViewShrinked = false
+    
+    var scrollView: UIScrollView?
+    
+    private var currentSign: Sign = .positive
     
     static func createKeyboardView() -> KeyboardView {
         return Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)?.first as! KeyboardView
@@ -45,6 +50,8 @@ class KeyboardView: UIView {
     }
     
     func setup() {
+        self.isHidden = true
+        
         let width = UIScreen.main.bounds.width
         let height  = UIScreen.main.bounds.height
         let kbHeight = width - 50
@@ -71,6 +78,31 @@ class KeyboardView: UIView {
     }
     
     @IBAction func hideKey(_ sender: Any) {
+    }
+    
+    func show() {
+        isOnDisplay = true
+        isHidden = false
+        
+        if let _scrollView = scrollView {
+            if _scrollView.frame.height / 2 > KeyboardView.height {
+                isScrollViewShrinked = true
+                _scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
+                _scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
+            }
+        }
+    }
+    
+    func hide() {
+        isOnDisplay = false
+        isHidden = true
+        
+        if let _scrollView = scrollView {
+            if isScrollViewShrinked {
+                _scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+                _scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            }
+        }
     }
     
     /*
