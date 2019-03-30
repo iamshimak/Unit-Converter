@@ -30,8 +30,8 @@ class UnitsViewController: BrandViewController {
         keyboardView = KeyboardView.createKeyboardView()
         keyboardView.scrollView = scrollView
         
-        keyboardView.onNumberKeyPressed = { number, sign in
-            self.onNumberKeyPressed(number: number, sign: sign)
+        keyboardView.onNumberKeyPressed = { sign, number, tag in
+            self.onNumberKeyPressed(number: number, sign: sign, tag: tag)
         }
         
         keyboardView.onHideKeyPressed = {
@@ -44,7 +44,7 @@ class UnitsViewController: BrandViewController {
         UIApplication.shared.keyWindow!.addSubview(keyboardView)
     }
     
-    func onNumberKeyPressed(number: Int, sign: KeyboardView.Sign) {
+    func onNumberKeyPressed(number: Float, sign: KeyboardView.Sign, tag: Int) {
         
     }
     

@@ -26,12 +26,14 @@ class KeyboardView: UIView {
     var onClearAllKeyPressed: (() -> Void)?
     var onHideKeyPressed: (() -> Void)?
     var onSignKeyPressed: ((_ sign: Sign) -> Void)?
-    var onNumberKeyPressed: ((_ number: Int, _ sign: Sign) -> Void)?
+    var onNumberKeyPressed: ((_ sign: Sign, _ number: Float, _ tag: Int) -> Void)?
     
     var isOnDisplay = false
     var isScrollViewShrinked = false
     
     var scrollView: UIScrollView?
+    
+    var selectedTextField: UITextField?
     
     private var currentSign: Sign = .positive
     
@@ -58,10 +60,27 @@ class KeyboardView: UIView {
         let modifieFframe = CGRect.init(x: 0, y: height - kbHeight, width: width, height: kbHeight)
         self.frame = modifieFframe
     }
+    
+    func textField(for texfield: UITextField) {
+        selectedTextField = texfield
+    }
+    
+    func unselectTextField() {
+        selectedTextField = nil
+    }
 
     @IBAction func numberKey(_ sender: UIButton) {
-        if let onNumberKeyPressed = onNumberKeyPressed {
-            onNumberKeyPressed(Int(sender.titleLabel!.text!)!, currentSign)
+        if let onNumberKeyPressed = onNumberKeyPressed,
+            let key = sender.titleLabel!.text,
+            let text = NumberFormatter().number(from: key) {
+            if currentSign == .negative {
+                
+            }
+            onNumberKeyPressed(currentSign, text.floatValue, selectedTextField?.tag ?? -1)
+            
+            if let textField = selectedTextField {
+                textField.insertText(key)
+            }
         }
     }
     
