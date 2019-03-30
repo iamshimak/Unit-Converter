@@ -120,14 +120,49 @@
         <!--Constants-->
         <scene sceneID="dNS-BM-RnP">
             <objects>
-                <viewController id="Dnk-fE-NoC" sceneMemberID="viewController">
+                <viewController id="Dnk-fE-NoC" customClass="ConstantViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7D-16-gDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5DG-FK-n4i">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DG-FK-n4i" customClass="Equa">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="constantCell" rowHeight="120" id="Uxi-Qi-bCp" customClass="EquationTableViewCell" customModule="UnitConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uxi-Qi-bCp" id="2bC-be-awH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g8-FQ-zOw">
+                                                    <rect key="frame" x="10" y="10" width="33.333333333333336" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8S-vp-OIP" customClass="MTMathUILabel">
+                                                    <rect key="frame" x="10" y="41.000000000000014" width="394" height="68.666666666666671"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="M8S-vp-OIP" secondAttribute="trailing" constant="10" id="1I6-Jb-0c8"/>
+                                                <constraint firstItem="M8S-vp-OIP" firstAttribute="top" secondItem="6g8-FQ-zOw" secondAttribute="bottom" constant="10" id="1kU-WT-h5j"/>
+                                                <constraint firstItem="M8S-vp-OIP" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="9zV-bA-Yqh"/>
+                                                <constraint firstItem="6g8-FQ-zOw" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="JJi-We-Ggz"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6g8-FQ-zOw" secondAttribute="trailing" constant="10" id="mbm-nD-LID"/>
+                                                <constraint firstAttribute="bottom" secondItem="M8S-vp-OIP" secondAttribute="bottom" constant="10" id="npk-sw-X28"/>
+                                                <constraint firstItem="6g8-FQ-zOw" firstAttribute="top" secondItem="2bC-be-awH" secondAttribute="top" constant="10" id="oBO-hz-rLb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="equationLabel" destination="M8S-vp-OIP" id="9Se-yd-bH1"/>
+                                            <outlet property="titleLabel" destination="6g8-FQ-zOw" id="JWy-lz-bTE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Dnk-fE-NoC" id="NO2-lF-uHo"/>
                                     <outlet property="delegate" destination="Dnk-fE-NoC" id="bqp-wf-aZI"/>
@@ -144,6 +179,9 @@
                         <viewLayoutGuide key="safeArea" id="D1s-Pb-5Rx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Constants" id="TRZ-ym-HJo"/>
+                    <connections>
+                        <outlet property="tableView" destination="5DG-FK-n4i" id="dVU-Uv-Pyn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnF-po-S4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
