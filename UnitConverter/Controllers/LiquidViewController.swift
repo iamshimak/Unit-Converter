@@ -95,12 +95,12 @@ class LiquidViewController: UnitsViewController {
     // MARK: Save model
     
     override func onSaveButtonPressed() {
-        let weightEquation = Equations.Weight(ounce: getTextFieldValue(from: ViewTags.Weight.ounceText),
-                                              pound: getTextFieldValue(from: ViewTags.Weight.poundText),
-                                              kg: getTextFieldValue(from: ViewTags.Weight.kgText),
-                                              gram: getTextFieldValue(from: ViewTags.Weight.gramText),
-                                              stone: getTextFieldValue(from: ViewTags.Weight.stonesText))
-        EquationsStoreManager.save(weightEquation)
+        let liquidEquation = Equations.Liquid(gallon: getTextFieldValue(from: ViewTags.Liquid.gallonText),
+                                              litre: getTextFieldValue(from: ViewTags.Liquid.litreText),
+                                              pint: getTextFieldValue(from: ViewTags.Liquid.pintText),
+                                              ounce: getTextFieldValue(from: ViewTags.Liquid.ounceText),
+                                              milliliter: getTextFieldValue(from: ViewTags.Liquid.milliliterText))
+        EquationsStoreManager.save(liquidEquation)
     }
     
     

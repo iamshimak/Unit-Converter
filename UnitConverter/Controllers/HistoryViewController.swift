@@ -29,6 +29,8 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
             val = EquationsStoreManager.retrieve(object: Equations.Weight.self).equationDictionary
         case 2:
             val = EquationsStoreManager.retrieve(object: Equations.Length.self).equationDictionary
+        case 4:
+            val = EquationsStoreManager.retrieve(object: Equations.Liquid.self).equationDictionary
         default:
             break
         }
