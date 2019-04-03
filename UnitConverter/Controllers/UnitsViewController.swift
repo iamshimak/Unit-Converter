@@ -8,14 +8,16 @@
 
 import UIKit
 
-class UnitsViewController: BrandViewController {
+class UnitsViewController: BrandViewController, UITextFieldDelegate {
     
     var keyboardView: KeyboardView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItem()
         setupKeyboardHide()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setupNavigationItem() {
@@ -40,7 +42,7 @@ class UnitsViewController: BrandViewController {
         keyboardView = KeyboardView.createKeyboardView()
         keyboardView.scrollView = scrollView
         
-        keyboardView.onNumberKeyPressed = { sign, number, tag in
+        keyboardView.onNumberKeyPressed = { sign, number, pressedNumber, tag in
             self.onNumberKeyPressed(number: number, sign: sign, tag: tag)
         }
         
@@ -55,7 +57,7 @@ class UnitsViewController: BrandViewController {
     }
     
     func onNumberKeyPressed(number: Float, sign: KeyboardView.Sign, tag: Int) {
-        
+        textfield(value: number, for: tag)
     }
     
     func onHideKeyPressed() {
@@ -63,6 +65,26 @@ class UnitsViewController: BrandViewController {
     }
     
     // MARK: - TextField helpers
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        keyboardView.show()
+        keyboardView.textField(for: textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        keyboardView.hide()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // TODO validations
+        let tag = textField.tag
+        let value = TextUtils.numberValue(for: textField.text, range: range, replaceString: string)
+        textfield(value: value, for: tag)
+        
+        return true
+    }
+    
+    func textfield(value: Float,for tag: Int) {}
     
     func updateTextField(tag: Int, value: Float) {
         let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
@@ -82,15 +104,15 @@ class UnitsViewController: BrandViewController {
         return value
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

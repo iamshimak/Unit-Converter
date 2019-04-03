@@ -26,7 +26,7 @@ class KeyboardView: UIView {
     var onClearAllKeyPressed: (() -> Void)?
     var onHideKeyPressed: (() -> Void)?
     var onSignKeyPressed: ((_ sign: Sign) -> Void)?
-    var onNumberKeyPressed: ((_ sign: Sign, _ number: Float, _ tag: Int) -> Void)?
+    var onNumberKeyPressed: ((_ sign: Sign, _ number: Float, _ pressedNumber: Float, _ tag: Int) -> Void)?
     
     var isOnDisplay = false
     var isScrollViewShrinked = false
@@ -73,15 +73,20 @@ class KeyboardView: UIView {
     // Logic for get text from keyboard and pass to viewcontroller
     @IBAction func numberKey(_ sender: UIButton) {
         if let onNumberKeyPressed = onNumberKeyPressed,
-            let key = sender.titleLabel!.text,
-            let text = NumberFormatter().number(from: key) {
-            if currentSign == .negative {
-                //TODO negative value
-            }
-            onNumberKeyPressed(currentSign, text.floatValue, selectedTextField?.tag ?? -1)
+            let numberKey = sender.titleLabel!.text,
+            let numberKeyFormat = NumberFormatter().number(from: numberKey) {
             
             if let textField = selectedTextField {
-                textField.insertText(key)
+                if let textFieldText = textField.text,
+                    let textFieldFormat = NumberFormatter().number(from: "\(textFieldText)\(numberKeyFormat)") {
+                    
+                    onNumberKeyPressed(currentSign, textFieldFormat.floatValue, numberKeyFormat.floatValue, selectedTextField?.tag ?? -1)
+                    textField.insertText(numberKey)
+                    
+                    if currentSign == .negative {
+                        //TODO negative value
+                    }
+                }
             }
         }
     }

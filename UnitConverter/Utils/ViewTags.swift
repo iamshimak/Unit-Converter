@@ -28,4 +28,12 @@ class ViewTags {
         static let yardText: Int = 3004
         static let inchText: Int = 3005
     }
+    
+    class Liquid: Codable {
+        static let gallonText: Int = 5000
+        static let litreText: Int = 5001
+        static let pintText: Int = 5002
+        static let ounceText: Int = 5003
+        static let milliliterText: Int = 5004
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
+class WeightUnitsViewController: UnitsViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -19,29 +19,7 @@ class WeightUnitsViewController: UnitsViewController, UITextFieldDelegate {
     
     // MARK: Textfield Delegates
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        keyboardView.show()
-        keyboardView.textField(for: textField)
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        keyboardView.hide()
-    }
-    
-    override func onNumberKeyPressed(number: Float, sign: KeyboardView.Sign, tag: Int) {
-        textfield(value: number, for: tag)
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // TODO validations
-        let tag = textField.tag
-        let value = TextUtils.numberValue(for: textField.text, range: range, replaceString: string)
-        textfield(value: value, for: tag)
-        
-        return true
-    }
-    
-    private func textfield(value: Float,for tag: Int) {
+    override func textfield(value: Float,for tag: Int) {
         //TODO check an easy way
         print("Value: \(value) Tag: \(tag)")
         switch tag {
