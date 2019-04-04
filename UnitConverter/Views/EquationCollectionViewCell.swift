@@ -13,6 +13,8 @@ class EquationCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    static let identifier = "equationCell"
+    
     static let gradientColors: [[UIColor]] = [
         [FlatMint(), FlatMintDark()],
         [FlatYellow(), FlatYellowDark()],

@@ -26,9 +26,9 @@ class ConstantViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     private func addEquations() {
-        //let font = UIFont(name:"Tex Gyre Termes Math", size: 17)!
-        let fontItalic = mathItalicFont(size: 17)
-        let preTextItalic = mathItalicFont(size: 22)
+        let defaultFontSize: CGFloat = 20
+        let fontItalic = mathItalicFont(size: defaultFontSize)
+        let preTextItalic = mathItalicFont(size: defaultFontSize + 5)
         
         var attributedString = NSMutableAttributedString(string: "me", attributes: [.font: preTextItalic])
         var preTextAttributes: [NSAttributedString.Key : Any] = [
@@ -49,12 +49,12 @@ class ConstantViewController: UIViewController, UITableViewDataSource, UITableVi
         equations["Neutron mass"] = attributedString
 
         attributedString = NSMutableAttributedString(string: "\u{03b5}0", attributes: [.font: preTextItalic])
-        preTextAttributes = [.font: mathItalicFont(size: 16), .baselineOffset: -3]
+        preTextAttributes = [.font: mathItalicFont(size: defaultFontSize - 1), .baselineOffset: -3]
         attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
         equations["Electric permitivitty"] = attributedString
 
-        attributedString = NSMutableAttributedString(string: "\u{03bc}0", attributes: [.font: mathItalicFont(size: 24)])
-        preTextAttributes = [.font: mathItalicFont(size: 14), .baselineOffset: -3]
+        attributedString = NSMutableAttributedString(string: "\u{03bc}0", attributes: [.font: mathItalicFont(size: defaultFontSize + 7)])
+        preTextAttributes = [.font: mathItalicFont(size: defaultFontSize - 3), .baselineOffset: -3]
         attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
         equations["Magnetic permitivitty"] = attributedString
 

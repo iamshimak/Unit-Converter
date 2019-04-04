@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "equationCell", for: indexPath) as! EquationCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EquationCollectionViewCell.identifier, for: indexPath) as! EquationCollectionViewCell
         cell.nameLabel.text = labelNames[indexPath.row]
         cell.setGradientBackground(forIndex: indexPath.row)
         return cell

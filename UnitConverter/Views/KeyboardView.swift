@@ -21,7 +21,7 @@ class KeyboardView: UIView {
             return width - 50
         }
     }
-    
+    // Block methods to setup by other class
     var onClearKeynPressed: (() -> Void)?
     var onClearAllKeyPressed: (() -> Void)?
     var onHideKeyPressed: (() -> Void)?

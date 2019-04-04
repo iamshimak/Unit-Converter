@@ -33,6 +33,7 @@
 		1487DED122554DAB00F1F6D0 /* latinmodern-math.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED022554DAB00F1F6D0 /* latinmodern-math.otf */; };
 		1487DED322554DB400F1F6D0 /* texgyretermes-math.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */; };
 		1487DED5225559C600F1F6D0 /* texgyretermes-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */; };
+		149573112256A48800474C09 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149573102256A48800474C09 /* KeyboardButton.swift */; };
 		14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B04429224EE1ED00762572 /* ConstantViewController.swift */; };
 		14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442B224EE3B100762572 /* EquationTableViewCell.swift */; };
 		14B0442F224EE66100762572 /* iosMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442E224EE66100762572 /* iosMath.m */; };
@@ -70,6 +71,7 @@
 		1487DED022554DAB00F1F6D0 /* latinmodern-math.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "latinmodern-math.otf"; sourceTree = "<group>"; };
 		1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-math.otf"; sourceTree = "<group>"; };
 		1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-italic.otf"; sourceTree = "<group>"; };
+		149573102256A48800474C09 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		14B04429224EE1ED00762572 /* ConstantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.asm.arm; };
 		14B0442B224EE3B100762572 /* EquationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTableViewCell.swift; sourceTree = "<group>"; };
 		14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitConverter-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				146A126D2249847800CF4AED /* TabView.swift */,
 				1414F030224ECEAB009F4E5F /* TabWrapperView.swift */,
 				1421F689224C29DE00D97EAB /* KeyboardView.swift */,
+				149573102256A48800474C09 /* KeyboardButton.swift */,
 				1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */,
 				14B0442B224EE3B100762572 /* EquationTableViewCell.swift */,
 				14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */,
@@ -362,6 +365,7 @@
 				1414F026224EA8D9009F4E5F /* ViewTags.swift in Sources */,
 				1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */,
 				1421F688224C084E00D97EAB /* Equations.swift in Sources */,
+				149573112256A48800474C09 /* KeyboardButton.swift in Sources */,
 				14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */,
 				1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */,
 				1487DECD2255389700F1F6D0 /* LiquidViewController.swift in Sources */,

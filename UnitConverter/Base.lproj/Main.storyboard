@@ -122,7 +122,7 @@
                                 <rect key="frame" x="10" y="74" width="394" height="29"/>
                                 <segments>
                                     <segment title="Weight"/>
-                                    <segment title="Temperature"/>
+                                    <segment title="Temp"/>
                                     <segment title="Length"/>
                                     <segment title="Speed"/>
                                     <segment title="Liquid"/>
