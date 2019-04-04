@@ -19,7 +19,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: - DataSource
@@ -31,6 +40,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "equationCell", for: indexPath) as! EquationCollectionViewCell
         cell.nameLabel.text = labelNames[indexPath.row]
+        cell.setGradientBackground(forIndex: indexPath.row)
         return cell
     }
     
@@ -43,26 +53,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: - DelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //2
-        let paddingSpace: CGFloat = 10.0
+        let paddingSpace: CGFloat = 30.0
         let availableWidth: CGFloat = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / 2
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
-    }
-    
-    //3
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-    
-    // 4
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+        return CGSize(width: widthPerItem, height: widthPerItem * 0.60)
     }
     
 }

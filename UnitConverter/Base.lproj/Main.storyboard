@@ -26,19 +26,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMg-o2-ivN" userLabel="LogoView">
                                 <rect key="frame" x="0.0" y="64" width="414" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit Shit!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgu-6q-k1O">
-                                        <rect key="frame" x="0.0" y="0.0" width="319.66666666666669" height="120"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converter+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="tgu-6q-k1O">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="120"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.89560848976109098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="tgu-6q-k1O" firstAttribute="leading" secondItem="wMg-o2-ivN" secondAttribute="leading" id="SQs-wJ-yGD"/>
+                                    <constraint firstItem="tgu-6q-k1O" firstAttribute="leading" secondItem="wMg-o2-ivN" secondAttribute="leading" constant="10" id="SQs-wJ-yGD"/>
                                     <constraint firstItem="tgu-6q-k1O" firstAttribute="top" secondItem="wMg-o2-ivN" secondAttribute="top" id="bNL-qQ-Ufg"/>
                                     <constraint firstAttribute="height" constant="120" id="kit-a6-3ZA"/>
                                     <constraint firstAttribute="bottom" secondItem="tgu-6q-k1O" secondAttribute="bottom" id="rgA-ex-nFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="tgu-6q-k1O" secondAttribute="trailing" constant="10" id="xpb-VH-E8C"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4hg-co-zd6">
@@ -48,44 +48,32 @@
                                     <size key="itemSize" width="130" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equationCell" id="hQ6-Em-xuY" customClass="EquationCollectionViewCell" customModule="UnitConverter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <rect key="frame" x="10" y="10" width="130" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-0T-aje">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equation Nane" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-Qk-Vxi">
-                                                            <rect key="frame" x="10" y="10" width="110" height="110"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="gkB-Qk-Vxi" secondAttribute="trailing" constant="10" id="UEC-Hm-pfe"/>
-                                                        <constraint firstItem="gkB-Qk-Vxi" firstAttribute="leading" secondItem="AOD-0T-aje" secondAttribute="leading" constant="10" id="gis-lh-r3g"/>
-                                                        <constraint firstItem="gkB-Qk-Vxi" firstAttribute="top" secondItem="AOD-0T-aje" secondAttribute="top" constant="10" id="qZN-ls-H7g"/>
-                                                        <constraint firstAttribute="bottom" secondItem="gkB-Qk-Vxi" secondAttribute="bottom" constant="10" id="tvE-Tt-f5q"/>
-                                                    </constraints>
-                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK5-5x-8XW">
+                                                    <rect key="frame" x="5" y="5" width="120" height="120"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="AOD-0T-aje" secondAttribute="trailing" id="0Fn-Xd-qZz"/>
-                                            <constraint firstItem="AOD-0T-aje" firstAttribute="leading" secondItem="hQ6-Em-xuY" secondAttribute="leading" id="Vpj-We-acs"/>
-                                            <constraint firstItem="AOD-0T-aje" firstAttribute="top" secondItem="hQ6-Em-xuY" secondAttribute="top" id="eMX-41-EqJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="AOD-0T-aje" secondAttribute="bottom" id="eZE-OS-eft"/>
+                                            <constraint firstAttribute="bottom" secondItem="EK5-5x-8XW" secondAttribute="bottom" constant="5" id="5P0-ck-Fap"/>
+                                            <constraint firstItem="EK5-5x-8XW" firstAttribute="top" secondItem="hQ6-Em-xuY" secondAttribute="top" constant="5" id="SRg-4d-dBk"/>
+                                            <constraint firstItem="EK5-5x-8XW" firstAttribute="leading" secondItem="hQ6-Em-xuY" secondAttribute="leading" constant="5" id="YIj-IG-ART"/>
+                                            <constraint firstAttribute="trailing" secondItem="EK5-5x-8XW" secondAttribute="trailing" constant="5" id="nzf-RK-AMJ"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="nameLabel" destination="gkB-Qk-Vxi" id="avx-lb-Emi"/>
+                                            <outlet property="nameLabel" destination="EK5-5x-8XW" id="gyV-gU-qTA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -125,7 +113,7 @@
         <!--History-->
         <scene sceneID="jdP-4I-eTw">
             <objects>
-                <viewController id="kR3-Pg-KQY" customClass="HistoryViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="History" id="kR3-Pg-KQY" customClass="HistoryViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dWr-ZB-6wX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +149,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuy-rW-Of8">
-                                                    <rect key="frame" x="10" y="41" width="394" height="48.666666666666657"/>
+                                                    <rect key="frame" x="10" y="41" width="355" height="48.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -211,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="3516" y="-1242"/>
         </scene>
-        <!--Constants-->
+        <!--Formulas-->
         <scene sceneID="dNS-BM-RnP">
             <objects>
-                <viewController id="Dnk-fE-NoC" customClass="ConstantViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Formulas" id="Dnk-fE-NoC" customClass="ConstantViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7D-16-gDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,13 +219,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g8-FQ-zOw">
-                                                    <rect key="frame" x="10" y="10" width="33.333333333333336" height="21"/>
+                                                    <rect key="frame" x="10" y="10" width="33.666666666666664" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="equation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYX-i0-tnB">
-                                                    <rect key="frame" x="10" y="41" width="394" height="69"/>
+                                                    <rect key="frame" x="10" y="41" width="355" height="69"/>
                                                     <fontDescription key="fontDescription" name="TeXGyreTermesMath-Regular" family="TeX Gyre Termes Math" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
