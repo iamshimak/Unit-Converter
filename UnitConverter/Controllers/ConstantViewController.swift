@@ -18,7 +18,9 @@ class ConstantViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         addEquations()
-        // Do any additional setup after loading the view.
+
+        self.tabBarController?.navigationItem.title = "Constants"
+        self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     func mathItalicFont(size: CGFloat) -> UIFont {

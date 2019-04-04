@@ -148,7 +148,7 @@
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                             <connections>
-                                <action selector="numberKey:" destination="iN0-l3-epB" eventType="touchUpInside" id="zK1-gA-cP0"/>
+                                <action selector="dotKey:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Nv-c6-w5p"/>
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-hw-3R7" customClass="KeyboardButton" customModule="UnitConverter" customModuleProvider="target">

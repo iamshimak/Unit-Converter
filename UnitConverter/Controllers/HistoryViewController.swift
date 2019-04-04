@@ -19,6 +19,9 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.sendActions(for: .valueChanged)
+        
+        self.tabBarController?.navigationItem.title = "History"
+        self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // Retrieve object from UserDefaults and uodate current value

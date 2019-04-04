@@ -91,6 +91,13 @@ class KeyboardView: UIView {
         }
     }
     
+    @IBAction func dotKey(_ sender: UIButton) {
+        if let onNumberKeyPressed = onNumberKeyPressed,
+            let numberKey = sender.titleLabel!.text {
+            
+        }
+    }
+    
     @IBAction func clearAllKey(_ sender: UIButton) {
         if let onClearAllKeyPressed = onClearKeynPressed {
             onClearAllKeyPressed()

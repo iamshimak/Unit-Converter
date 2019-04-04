@@ -18,6 +18,16 @@ class UnitsViewController: BrandViewController, UITextFieldDelegate {
         setupKeyboardHide()
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        //TODO back button history name change
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.keyWindow!.addSubview(keyboardView)
     }
     
     func setupNavigationItem() {
@@ -49,11 +59,6 @@ class UnitsViewController: BrandViewController, UITextFieldDelegate {
         keyboardView.onHideKeyPressed = {
             self.onHideKeyPressed()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIApplication.shared.keyWindow!.addSubview(keyboardView)
     }
     
     func onNumberKeyPressed(number: Float, sign: KeyboardView.Sign, tag: Int) {
