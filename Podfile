@@ -6,6 +6,6 @@ target 'UnitConverter' do
   use_frameworks!
 
   # Pods for UnitConverter
-  pod 'iosMath'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 end

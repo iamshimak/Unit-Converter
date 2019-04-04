@@ -70,6 +70,7 @@ class KeyboardView: UIView {
         selectedTextField = nil
     }
 
+    // MARK: - Keyboard Actions
     // Logic for get text from keyboard and pass to viewcontroller
     @IBAction func numberKey(_ sender: UIButton) {
         if let onNumberKeyPressed = onNumberKeyPressed,
@@ -104,6 +105,7 @@ class KeyboardView: UIView {
     }
     
     @IBAction func hideKey(_ sender: Any) {
+        hide()
     }
     
     func show() {

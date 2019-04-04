@@ -152,6 +152,7 @@
 				146A1265224977AB00CF4AED /* Views */,
 				1478127522495AEF00AE8E56 /* Models */,
 				1478127422495ADB00AE8E56 /* Controllers */,
+				1487DECE22554D6800F1F6D0 /* Resources */,
 				14781266224959A900AE8E56 /* Main.storyboard */,
 				14781269224959AA00AE8E56 /* Assets.xcassets */,
 				1478126B224959AA00AE8E56 /* LaunchScreen.storyboard */,
@@ -160,7 +161,6 @@
 				14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */,
 				14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */,
 				14631B48224FC60C00DFC5DE /* extensions.swift */,
-				1487DECE22554D6800F1F6D0 /* Resources */,
 			);
 			path = UnitConverter;
 			sourceTree = "<group>";
@@ -308,13 +308,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UnitConverter/Pods-UnitConverter-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/iosMath/iosMath.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iosMath.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

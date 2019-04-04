@@ -1,16 +1,23 @@
 PODS:
-  - iosMath (0.9.4)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
 
 DEPENDENCIES:
-  - iosMath
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - iosMath
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
-  iosMath: f7a6cbadf9d836d2149c2a84c435b1effc244cba
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
 
-PODFILE CHECKSUM: 2bad6a310814c936732fa10cb5e9cd938224ea37
+PODFILE CHECKSUM: 7e2110a1caa6add77eca8268d75094c5a853a961
 
 COCOAPODS: 1.6.1
