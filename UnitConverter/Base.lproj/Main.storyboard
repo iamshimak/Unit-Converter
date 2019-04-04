@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="texgyretermes-math.otf">
+            <string>TeXGyreTermesMath-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -231,23 +236,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8S-vp-OIP" customClass="MTMathUILabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="equation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYX-i0-tnB">
                                                     <rect key="frame" x="10" y="41" width="394" height="69"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
+                                                    <fontDescription key="fontDescription" name="TeXGyreTermesMath-Regular" family="TeX Gyre Termes Math" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="M8S-vp-OIP" secondAttribute="trailing" constant="10" id="1I6-Jb-0c8"/>
-                                                <constraint firstItem="M8S-vp-OIP" firstAttribute="top" secondItem="6g8-FQ-zOw" secondAttribute="bottom" constant="10" id="1kU-WT-h5j"/>
-                                                <constraint firstItem="M8S-vp-OIP" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="9zV-bA-Yqh"/>
+                                                <constraint firstAttribute="trailing" secondItem="FYX-i0-tnB" secondAttribute="trailing" constant="10" id="EJw-WH-MBE"/>
                                                 <constraint firstItem="6g8-FQ-zOw" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="JJi-We-Ggz"/>
+                                                <constraint firstItem="FYX-i0-tnB" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="cxU-op-Fh6"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6g8-FQ-zOw" secondAttribute="trailing" constant="10" id="mbm-nD-LID"/>
-                                                <constraint firstAttribute="bottom" secondItem="M8S-vp-OIP" secondAttribute="bottom" constant="10" id="npk-sw-X28"/>
                                                 <constraint firstItem="6g8-FQ-zOw" firstAttribute="top" secondItem="2bC-be-awH" secondAttribute="top" constant="10" id="oBO-hz-rLb"/>
+                                                <constraint firstItem="FYX-i0-tnB" firstAttribute="top" secondItem="6g8-FQ-zOw" secondAttribute="bottom" constant="10" id="sbw-2l-NOs"/>
+                                                <constraint firstAttribute="bottom" secondItem="FYX-i0-tnB" secondAttribute="bottom" constant="10" id="uhf-go-rMQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="equationLabel" destination="M8S-vp-OIP" id="9Se-yd-bH1"/>
+                                            <outlet property="equationLabel" destination="FYX-i0-tnB" id="wKP-Jb-zFU"/>
                                             <outlet property="titleLabel" destination="6g8-FQ-zOw" id="JWy-lz-bTE"/>
                                         </connections>
                                     </tableViewCell>

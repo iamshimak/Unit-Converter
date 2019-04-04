@@ -13,21 +13,64 @@ class ConstantViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     let equationTitles: [String] = ["Electron mass", "Proton mass", "Neutron mass", "Electric permitivitty", "Magnetic permitivitty", "Speed of light in meteres"]
-    let equations: [String] = ["m_e", "m_p", "m_n", "e_0", "\\mu_0", "c"]
+    var equations: [String:NSAttributedString] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addEquations()
         // Do any additional setup after loading the view.
+    }
+
+    func mathItalicFont(size: CGFloat) -> UIFont {
+        return UIFont(name:"TexGyreTermes-Italic", size: size)!
+    }
+    
+    private func addEquations() {
+        //let font = UIFont(name:"Tex Gyre Termes Math", size: 17)!
+        let fontItalic = mathItalicFont(size: 17)
+        let preTextItalic = mathItalicFont(size: 22)
+        
+        var attributedString = NSMutableAttributedString(string: "me", attributes: [.font: preTextItalic])
+        var preTextAttributes: [NSAttributedString.Key : Any] = [
+            .font: fontItalic,
+            .baselineOffset: -3
+        ]
+        attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
+        equations["Electron mass"] = attributedString
+
+        attributedString = NSMutableAttributedString(string: "mp", attributes: [.font: preTextItalic])
+        preTextAttributes = [.font: fontItalic, .baselineOffset: -3]
+        attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
+        equations["Proton mass"] = attributedString
+
+        attributedString = NSMutableAttributedString(string: "mn", attributes: [.font: preTextItalic])
+        preTextAttributes = [.font: fontItalic, .baselineOffset: -3]
+        attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
+        equations["Neutron mass"] = attributedString
+
+        attributedString = NSMutableAttributedString(string: "\u{03b5}0", attributes: [.font: preTextItalic])
+        preTextAttributes = [.font: mathItalicFont(size: 16), .baselineOffset: -3]
+        attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
+        equations["Electric permitivitty"] = attributedString
+
+        attributedString = NSMutableAttributedString(string: "\u{03bc}0", attributes: [.font: mathItalicFont(size: 24)])
+        preTextAttributes = [.font: mathItalicFont(size: 14), .baselineOffset: -3]
+        attributedString.setAttributes(preTextAttributes, range: NSRange(location:1,length:1))
+        equations["Magnetic permitivitty"] = attributedString
+
+        attributedString = NSMutableAttributedString(string: "C", attributes: [.font: preTextItalic])
+        equations["Speed of light in meteres"] = attributedString
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return equationTitles.count
+        return equations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "constantCell", for: indexPath) as! EquationTableViewCell
-        cell.updateValues(title: equationTitles[indexPath.row], equation: equations[indexPath.row])
+        
+        let arrayEquations = Array(equations)
+        cell.updateValues(title: arrayEquations[indexPath.row].key, attributedEquation: arrayEquations[indexPath.row].value)
         return cell
     }
     

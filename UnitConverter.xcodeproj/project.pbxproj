@@ -30,6 +30,9 @@
 		1478126D224959AA00AE8E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1478126B224959AA00AE8E56 /* LaunchScreen.storyboard */; };
 		1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478127622496A7100AE8E56 /* WeightUnitsViewController.swift */; };
 		1487DECD2255389700F1F6D0 /* LiquidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487DECC2255389700F1F6D0 /* LiquidViewController.swift */; };
+		1487DED122554DAB00F1F6D0 /* latinmodern-math.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED022554DAB00F1F6D0 /* latinmodern-math.otf */; };
+		1487DED322554DB400F1F6D0 /* texgyretermes-math.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */; };
+		1487DED5225559C600F1F6D0 /* texgyretermes-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */; };
 		14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B04429224EE1ED00762572 /* ConstantViewController.swift */; };
 		14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442B224EE3B100762572 /* EquationTableViewCell.swift */; };
 		14B0442F224EE66100762572 /* iosMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442E224EE66100762572 /* iosMath.m */; };
@@ -64,7 +67,10 @@
 		1478126E224959AA00AE8E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1478127622496A7100AE8E56 /* WeightUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnitsViewController.swift; sourceTree = "<group>"; };
 		1487DECC2255389700F1F6D0 /* LiquidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidViewController.swift; sourceTree = "<group>"; };
-		14B04429224EE1ED00762572 /* ConstantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewController.swift; sourceTree = "<group>"; };
+		1487DED022554DAB00F1F6D0 /* latinmodern-math.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "latinmodern-math.otf"; sourceTree = "<group>"; };
+		1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-math.otf"; sourceTree = "<group>"; };
+		1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-italic.otf"; sourceTree = "<group>"; };
+		14B04429224EE1ED00762572 /* ConstantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.asm.arm; };
 		14B0442B224EE3B100762572 /* EquationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTableViewCell.swift; sourceTree = "<group>"; };
 		14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitConverter-Bridging-Header.h"; sourceTree = "<group>"; };
 		14B0442E224EE66100762572 /* iosMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosMath.m; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */,
 				14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */,
 				14631B48224FC60C00DFC5DE /* extensions.swift */,
+				1487DECE22554D6800F1F6D0 /* Resources */,
 			);
 			path = UnitConverter;
 			sourceTree = "<group>";
@@ -180,6 +187,24 @@
 				1421F687224C084E00D97EAB /* Equations.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1487DECE22554D6800F1F6D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1487DECF22554D8100F1F6D0 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1487DECF22554D8100F1F6D0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */,
+				1487DED022554DAB00F1F6D0 /* latinmodern-math.otf */,
+				1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		328310E253BDCF742E71F09C /* Frameworks */ = {
@@ -261,6 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */,
+				1487DED122554DAB00F1F6D0 /* latinmodern-math.otf in Resources */,
+				1487DED5225559C600F1F6D0 /* texgyretermes-italic.otf in Resources */,
+				1487DED322554DB400F1F6D0 /* texgyretermes-math.otf in Resources */,
 				1478126D224959AA00AE8E56 /* LaunchScreen.storyboard in Resources */,
 				1478126A224959AA00AE8E56 /* Assets.xcassets in Resources */,
 				146A126C224982EF00CF4AED /* TabView.xib in Resources */,
