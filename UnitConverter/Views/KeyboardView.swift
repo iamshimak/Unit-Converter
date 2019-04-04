@@ -53,13 +53,12 @@ class KeyboardView: UIView {
     
     // Initalize keyboard view
     func setup() {
-        self.isHidden = true
-        
         let width = UIScreen.main.bounds.width
         let height  = UIScreen.main.bounds.height
         let kbHeight = width - 50
         let modifieFframe = CGRect.init(x: 0, y: height - kbHeight, width: width, height: kbHeight)
         self.frame = modifieFframe
+        hide()
     }
     
     func textField(for texfield: UITextField) {
@@ -109,9 +108,16 @@ class KeyboardView: UIView {
     }
     
     func show() {
-        isOnDisplay = true
-        isHidden = false
+        UIView.animate(withDuration: 0.3, animations: {
+            let kFrame = self.frame
+            let kHeight = UIScreen.main.bounds.height - KeyboardView.height
+            self.frame = CGRect(x: kFrame.minX, y: kHeight, width: kFrame.width, height: kFrame.height)
+        }) { finished in
+            
+        }
         
+        
+        isOnDisplay = true
         if let _scrollView = scrollView {
             if _scrollView.frame.height / 2 > KeyboardView.height {
                 isScrollViewShrinked = true
@@ -122,9 +128,15 @@ class KeyboardView: UIView {
     }
     
     func hide() {
-        isOnDisplay = false
-        isHidden = true
+        UIView.animate(withDuration: 0.3, animations: {
+            let kFrame = self.frame
+            let kHeight = UIScreen.main.bounds.height
+            self.frame = CGRect(x: kFrame.minX, y: kHeight, width: kFrame.width, height: kFrame.height)
+        }) { finished in
+            
+        }
         
+        isOnDisplay = false
         if let _scrollView = scrollView {
             if isScrollViewShrinked {
                 _scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
@@ -132,13 +144,5 @@ class KeyboardView: UIView {
             }
         }
     }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }
