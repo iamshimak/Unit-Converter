@@ -95,7 +95,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="jd2-Uh-z2y"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeTab" id="jd2-Uh-z2y"/>
                     <navigationItem key="navigationItem" id="ioU-it-JHM"/>
                     <connections>
                         <outlet property="collectionView" destination="4hg-co-zd6" id="KOW-fQ-TrJ"/>
@@ -131,7 +131,7 @@
                                     <action selector="onSegmentedValueChanged:" destination="kR3-Pg-KQY" eventType="valueChanged" id="a7G-e5-c9N"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6dg-Cp-qDf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6dg-Cp-qDf">
                                 <rect key="frame" x="0.0" y="112" width="414" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -189,7 +189,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1dx-sP-dUP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" id="GoZ-IC-ZLy"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="GoZ-IC-ZLy"/>
                     <connections>
                         <outlet property="segmentedControl" destination="pud-qg-sJk" id="d5q-49-oVg"/>
                         <outlet property="tableview" destination="6dg-Cp-qDf" id="UOw-wR-HJV"/>
@@ -262,7 +262,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1s-Pb-5Rx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Constants" id="TRZ-ym-HJo"/>
+                    <tabBarItem key="tabBarItem" title="Formulas" image="ConstantsTab" id="TRZ-ym-HJo"/>
                     <connections>
                         <outlet property="tableView" destination="5DG-FK-n4i" id="dVU-Uv-Pyn"/>
                     </connections>
@@ -1119,4 +1119,8 @@
             <point key="canvasLocation" x="2064" y="-499"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ConstantsTab" width="22.5" height="22.5"/>
+        <image name="HomeTab" width="50" height="50"/>
+    </resources>
 </document>
