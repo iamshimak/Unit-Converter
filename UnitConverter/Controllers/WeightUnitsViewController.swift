@@ -20,7 +20,6 @@ class WeightUnitsViewController: UnitsViewController {
     // MARK: Textfield Delegates
     
     override func textfield(value: Float,for tag: Int) {
-        //TODO check an easy way
         print("Value: \(value) Tag: \(tag)")
         switch tag {
         case ViewTags.Weight.ounceText:
@@ -64,6 +63,10 @@ class WeightUnitsViewController: UnitsViewController {
         default:
             break
         }
+    }
+    
+    override func textFields() -> [Int] {
+        return ViewTags.Weight.weightTexts
     }
     
     // MARK: Save model

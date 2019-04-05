@@ -20,8 +20,6 @@ class LiquidViewController: UnitsViewController {
     // MARK: Textfield Delegates
     
     override func textfield(value: Float,for tag: Int) {
-        //TODO check an easy way
-        print("Value: \(value) Tag: \(tag)")
         switch tag {
         case ViewTags.Liquid.gallonText:
             var conValue = Equations.Liquid.gallon(toLitre: value)
@@ -90,6 +88,10 @@ class LiquidViewController: UnitsViewController {
         default:
             break
         }
+    }
+    
+    override func textFields() -> [Int] {
+        return []
     }
     
     // MARK: Save model

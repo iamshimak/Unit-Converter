@@ -20,8 +20,6 @@ class LengthUnitsViewController: UnitsViewController {
     // MARK: Textfield Delegates
     
     override func textfield(value: Float,for tag: Int) {
-        //TODO check an easy way
-        print("Value: \(value) Tag: \(tag)")
         switch tag {
         case ViewTags.Length.meterText:
             var conValue = Equations.Length.meter(toMile: value)
@@ -121,6 +119,10 @@ class LengthUnitsViewController: UnitsViewController {
         default:
             break
         }
+    }
+    
+    override func textFields() -> [Int] {
+        return []
     }
     
     // MARK: Save model

@@ -53,16 +53,16 @@ class UnitsViewController: BrandViewController, UITextFieldDelegate {
         keyboardView.scrollView = scrollView
         
         keyboardView.onNumberKeyPressed = { sign, number, pressedNumber, tag in
-            self.onNumberKeyPressed(number: number, sign: sign, tag: tag)
+            guard let number = number else {
+                self.clearTextFields(tags: self.textFields())
+                return
+            }
+            self.textfield(value: number, for: tag)
         }
         
         keyboardView.onHideKeyPressed = {
             self.onHideKeyPressed()
         }
-    }
-    
-    func onNumberKeyPressed(number: Float, sign: KeyboardView.Sign, tag: Int) {
-        textfield(value: number, for: tag)
     }
     
     func onHideKeyPressed() {
@@ -109,15 +109,15 @@ class UnitsViewController: BrandViewController, UITextFieldDelegate {
         return value
     }
     
+    func clearTextFields(tags: [Int]) {
+        for tag in tags {
+            let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
+            textField.text = nil
+        }
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func textFields() -> [Int] {
+        return []
+    }
     
 }
