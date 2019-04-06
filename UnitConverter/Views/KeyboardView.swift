@@ -168,14 +168,17 @@ class KeyboardView: UIView {
             
         }
         
-        
-        isOnDisplay = true
+        // Logic to bring scrollview up to uitextfield
         if let _scrollView = scrollView {
-            if _scrollView.frame.height / 2 > KeyboardView.height {
-                isScrollViewShrinked = true
-                _scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
-                _scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: KeyboardView.height, right: 0.0)
-            }
+            var viewFrame = _scrollView.frame
+            viewFrame.size.height -= KeyboardView.height
+            
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            _scrollView.frame = viewFrame
+            UIView.commitAnimations()
+            
+            isOnDisplay = true
         }
     }
     
@@ -188,12 +191,17 @@ class KeyboardView: UIView {
             
         }
         
-        isOnDisplay = false
+        // Logic to bring down scrollview
         if let _scrollView = scrollView {
-            if isScrollViewShrinked {
-                _scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-                _scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-            }
+            var viewFrame = _scrollView.frame
+            viewFrame.size.height += KeyboardView.height
+            
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            _scrollView.frame = viewFrame
+            UIView.commitAnimations()
+            
+            isOnDisplay = false
         }
     }
     
