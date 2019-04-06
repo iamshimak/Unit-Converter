@@ -86,10 +86,6 @@ class KeyboardView: UIView {
                                     textField.tag)
                 textField.insertText(numberKey)
             }
-            
-            if currentSign == .negative {
-                //TODO negative value
-            }
         }
     }
     
@@ -120,13 +116,14 @@ class KeyboardView: UIView {
     
     @IBAction func clearKey(_ sender: UIButton) {
         if let textField = selectedTextField,
-            var text = selectedTextField?.text {
+            var text = selectedTextField?.text,
+            text.count > 0 {
             
             text.remove(at: text.index(before: text.endIndex))
-            textField.text = text
+            textField.text = text == "" ? nil : text
             
-            if text == "-" {
-                currentSign = .positive
+            if text == "-" || text == "" {
+                clearAllKey(sender)
             }
             
             let textFieldFormat = NumberFormatter().number(from: text)

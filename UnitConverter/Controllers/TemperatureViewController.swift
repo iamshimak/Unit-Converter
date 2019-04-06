@@ -59,6 +59,7 @@ class TemperatureViewController: UnitsViewController {
                                                    fahrenheit: getTextFieldValue(from: ViewTags.Temperature.fahrenheitText),
                                                    kelvin: getTextFieldValue(from: ViewTags.Temperature.kelvinText))
         EquationsStoreManager.save(tempEquation)
+        AlertManager.showSaveAlert(self)
     }
 
 }

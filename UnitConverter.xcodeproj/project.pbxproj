@@ -20,6 +20,7 @@
 		14631B4B224FC73300DFC5DE /* EquationsStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */; };
 		14631B4D224FCD9300DFC5DE /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */; };
 		14691C652259342100107B39 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14691C642259342100107B39 /* TemperatureViewController.swift */; };
+		14691C672259448200107B39 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14691C662259448200107B39 /* AlertManager.swift */; };
 		146A12672249781800CF4AED /* BrandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A12662249781800CF4AED /* BrandTextField.swift */; };
 		146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A1268224981B100CF4AED /* EquationsViewController.swift */; };
 		146A126C224982EF00CF4AED /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146A126B224982EF00CF4AED /* TabView.xib */; };
@@ -58,6 +59,7 @@
 		14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsStoreManager.swift; sourceTree = "<group>"; };
 		14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		14691C642259342100107B39 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		14691C662259448200107B39 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		146A12662249781800CF4AED /* BrandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTextField.swift; sourceTree = "<group>"; };
 		146A1268224981B100CF4AED /* EquationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsViewController.swift; sourceTree = "<group>"; };
 		146A126B224982EF00CF4AED /* TabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				1414F02A224EAC41009F4E5F /* TextUtils.swift */,
+				14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */,
+				14691C662259448200107B39 /* AlertManager.swift */,
 				1414F025224EA8D9009F4E5F /* ViewTags.swift */,
 			);
 			path = Utils;
@@ -167,7 +171,6 @@
 				1478126E224959AA00AE8E56 /* Info.plist */,
 				14B0442E224EE66100762572 /* iosMath.m */,
 				14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */,
-				14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */,
 				14631B48224FC60C00DFC5DE /* extensions.swift */,
 			);
 			path = UnitConverter;
@@ -367,6 +370,7 @@
 				14631B49224FC60C00DFC5DE /* extensions.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
 				14691C652259342100107B39 /* TemperatureViewController.swift in Sources */,
+				14691C672259448200107B39 /* AlertManager.swift in Sources */,
 				14631B4B224FC73300DFC5DE /* EquationsStoreManager.swift in Sources */,
 				146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */,
 				3FDB8669225758A40038A71B /* EquationTextField.swift in Sources */,
