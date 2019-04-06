@@ -59,6 +59,18 @@ class Equations: Codable {
             self.milliliter = milliliter
         }
     }
+    
+    class Temperature: Codable {
+        let celsius: Float
+        let fahrenheit: Float
+        let kelvin: Float
+        
+        init(celsius: Float, fahrenheit: Float, kelvin: Float) {
+            self.celsius = celsius
+            self.fahrenheit = fahrenheit
+            self.kelvin = kelvin
+        }
+    }
 }
 
 extension Equations.Weight {
@@ -316,5 +328,31 @@ extension Equations.Liquid {
     
     static func millilitre(toOunce value: Float) -> Float {
         return value / 568.261
+    }
+}
+
+extension Equations.Temperature {
+    static func celsious(toFahrenheit value: Float) -> Float {
+        return (value * 9/5) + 32
+    }
+    
+    static func celsious(toKelvin value: Float) -> Float {
+        return value + 273.15
+    }
+    
+    static func fahrenheit(toCelsious value: Float) -> Float {
+        return (value - 32) * 5/9
+    }
+    
+    static func fahrenheit(toKelvin value: Float) -> Float {
+        return (value - 32) * 5/9 + 273.15
+    }
+    
+    static func kelvin(toCelsious value: Float) -> Float {
+        return value - 273.15
+    }
+    
+    static func kelvin(toFahrenheit value: Float) -> Float {
+        return (value - 273.15) * 9/5 + 32
     }
 }

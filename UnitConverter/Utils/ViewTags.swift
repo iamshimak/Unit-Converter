@@ -20,7 +20,15 @@ class ViewTags {
         static let weightTexts: [Int] = [1000, 1001, 1002, 1003, 1004]
     }
     
-    class Length: Codable {
+    class Temperature {
+        static let celsiusText: Int = 2000
+        static let fahrenheitText: Int = 2001
+        static let kelvinText: Int = 2002
+        
+        static let temperatureTexts: [Int] = [2000, 2001, 2002]
+    }
+    
+    class Length {
         static let meterText: Int = 3000
         static let mileText: Int = 3001
         static let cmText: Int = 3002
@@ -29,7 +37,7 @@ class ViewTags {
         static let inchText: Int = 3005
     }
     
-    class Liquid: Codable {
+    class Liquid {
         static let gallonText: Int = 5000
         static let litreText: Int = 5001
         static let pintText: Int = 5002

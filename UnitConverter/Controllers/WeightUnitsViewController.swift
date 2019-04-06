@@ -51,6 +51,7 @@ class WeightUnitsViewController: UnitsViewController {
             
             conValue = Equations.Weight.kg(toGrams: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
+            
         case ViewTags.Weight.gramText:
             var conValue = Equations.Weight.gram(toOunce: value)
             updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)

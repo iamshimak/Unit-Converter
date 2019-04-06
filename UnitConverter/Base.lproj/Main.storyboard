@@ -149,7 +149,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuy-rW-Of8">
-                                                    <rect key="frame" x="10" y="41" width="394" height="48.666666666666657"/>
+                                                    <rect key="frame" x="10" y="41" width="355" height="48.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -225,7 +225,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="equation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYX-i0-tnB">
-                                                    <rect key="frame" x="10" y="41" width="394" height="69"/>
+                                                    <rect key="frame" x="10" y="41" width="355" height="69"/>
                                                     <fontDescription key="fontDescription" name="TeXGyreTermesMath-Regular" family="TeX Gyre Termes Math" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -423,7 +423,7 @@
         <!--Temperature-->
         <scene sceneID="V79-F0-m9I">
             <objects>
-                <viewController title="Temperature" id="Dkc-vq-Kk9" sceneMemberID="viewController">
+                <viewController title="Temperature" id="Dkc-vq-Kk9" customClass="TemperatureViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzV-hu-ZmK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -445,6 +445,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Dkc-vq-Kk9" id="cYx-pG-Kjg"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz0-QE-dYZ">
                                                 <rect key="frame" x="20" y="85.666666666666657" width="78" height="21"/>
@@ -457,6 +460,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Dkc-vq-Kk9" id="bJh-O4-o6h"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kelvin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1y-27-HvN" userLabel="kelvin">
                                                 <rect key="frame" x="20" y="161.66666666666666" width="44" height="21"/>
@@ -469,6 +475,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Dkc-vq-Kk9" id="SYc-iw-knC"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -510,6 +519,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V3r-9K-HEu"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="als-Jy-99N" id="1yu-aA-AHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfJ-OT-cOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1120,7 +1132,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ConstantsTab" width="22.5" height="22.5"/>
+        <image name="ConstantsTab" width="30" height="30"/>
         <image name="HomeTab" width="50" height="50"/>
     </resources>
 </document>

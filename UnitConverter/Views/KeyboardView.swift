@@ -108,18 +108,54 @@ class KeyboardView: UIView {
             onClearAllKeyPressed()
         }
         
-        if selectedTextField?.text != nil {
+        if selectedTextField != nil {
             onNumberKeyPressed!(currentSign,
                                 nil,
                                 nil,
                                 selectedTextField!.tag)
+            
+            currentSign = .positive
         }
     }
     
     @IBAction func clearKey(_ sender: UIButton) {
+        if let textField = selectedTextField,
+            var text = selectedTextField?.text {
+            
+            text.remove(at: text.index(before: text.endIndex))
+            textField.text = text
+            
+            if text == "-" {
+                currentSign = .positive
+            }
+            
+            let textFieldFormat = NumberFormatter().number(from: text)
+            onNumberKeyPressed!(currentSign,
+                                textFieldFormat?.floatValue,
+                                nil,
+                                textField.tag)
+            
+        }
     }
-    
+    //TODO not assigning when - as first index
     @IBAction func signKey(_ sender: UIButton) {
+        if let textField = selectedTextField {
+            
+            var text = selectedTextField?.text ?? ""
+            
+            if !text.contains("-") {
+                text.insert("-", at: text.startIndex)
+                textField.text = text
+                
+                currentSign = .negative
+                let textFieldFormat = NumberFormatter().number(from: text)
+                
+                onNumberKeyPressed!(currentSign,
+                                    textFieldFormat?.floatValue,
+                                    nil,
+                                    textField.tag)
+            }
+        }
     }
     
     @IBAction func hideKey(_ sender: Any) {
