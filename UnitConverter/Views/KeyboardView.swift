@@ -10,6 +10,8 @@ import UIKit
 
 class KeyboardView: UIView {
     
+    @IBOutlet weak var negativeKey: KeyboardButton!
+    @IBOutlet weak var negativeKeyTopConstraint: NSLayoutConstraint!
     // Block methods to setup by other class
     var onClearKeynPressed: (() -> Void)?
     var onClearAllKeyPressed: (() -> Void)?
@@ -26,6 +28,16 @@ class KeyboardView: UIView {
         get {
             let width = UIScreen.main.bounds.width
             return width - 50
+        }
+    }
+    
+    var isNegativeKeyHidden: Bool {
+        get {
+            return negativeKeyTopConstraint.isActive
+        }
+        set (value) {
+            negativeKeyTopConstraint.priority = value ? .init(999) : .init(249)
+            negativeKey.isHidden = !value
         }
     }
     

@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class EquationTextField: UITextField, UITextFieldDelegate {
     
-    @IBInspectable var requireNegativeKey: Bool = false
+    @IBInspectable var isNegativeKeyRequired: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +31,7 @@ class EquationTextField: UITextField, UITextFieldDelegate {
     // MARK: - TextField helpers
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        KeyboardView.shared.isNegativeKeyHidden = isNegativeKeyRequired
         KeyboardView.shared.show()
         KeyboardView.shared.textField(for: textField)
     }
