@@ -10,6 +10,13 @@ import UIKit
 
 class KeyboardView: UIView {
     
+    // Block methods to setup by other class
+    var onClearKeynPressed: (() -> Void)?
+    var onClearAllKeyPressed: (() -> Void)?
+    var onHideKeyPressed: (() -> Void)?
+    var onSignKeyPressed: ((_ sign: Sign) -> Void)?
+    var onNumberKeyPressed: ((_ sign: Sign, _ number: Float?, _ pressedNumber: Float?, _ tag: Int) -> Void)?
+    
     enum Sign {
         case positive
         case negative
@@ -21,12 +28,6 @@ class KeyboardView: UIView {
             return width - 50
         }
     }
-    // Block methods to setup by other class
-    var onClearKeynPressed: (() -> Void)?
-    var onClearAllKeyPressed: (() -> Void)?
-    var onHideKeyPressed: (() -> Void)?
-    var onSignKeyPressed: ((_ sign: Sign) -> Void)?
-    var onNumberKeyPressed: ((_ sign: Sign, _ number: Float?, _ pressedNumber: Float?, _ tag: Int) -> Void)?
     
     var isOnDisplay = false
     var isScrollViewShrinked = false
@@ -36,6 +37,8 @@ class KeyboardView: UIView {
     var selectedTextField: UITextField?
     
     private var currentSign: Sign = .positive
+    
+    static let shared = createKeyboardView()
     
     static func createKeyboardView() -> KeyboardView {
         return Bundle.main.loadNibNamed("KeyboardView", owner: self, options: nil)?.first as! KeyboardView

@@ -12,7 +12,6 @@
 		1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02A224EAC41009F4E5F /* TextUtils.swift */; };
 		1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */; };
 		1414F02F224EC713009F4E5F /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F02E224EC713009F4E5F /* BrandViewController.swift */; };
-		1414F031224ECEAB009F4E5F /* TabWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414F030224ECEAB009F4E5F /* TabWrapperView.swift */; };
 		1421F688224C084E00D97EAB /* Equations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F687224C084E00D97EAB /* Equations.swift */; };
 		1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F689224C29DE00D97EAB /* KeyboardView.swift */; };
 		1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1421F685224C06CE00D97EAB /* KeyboardView.xib */; };
@@ -21,10 +20,7 @@
 		14631B4D224FCD9300DFC5DE /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */; };
 		14691C652259342100107B39 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14691C642259342100107B39 /* TemperatureViewController.swift */; };
 		14691C672259448200107B39 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14691C662259448200107B39 /* AlertManager.swift */; };
-		146A12672249781800CF4AED /* BrandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A12662249781800CF4AED /* BrandTextField.swift */; };
 		146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A1268224981B100CF4AED /* EquationsViewController.swift */; };
-		146A126C224982EF00CF4AED /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146A126B224982EF00CF4AED /* TabView.xib */; };
-		146A126E2249847800CF4AED /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A126D2249847800CF4AED /* TabView.swift */; };
 		14781263224959A900AE8E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14781262224959A900AE8E56 /* AppDelegate.swift */; };
 		14781265224959A900AE8E56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14781264224959A900AE8E56 /* HomeViewController.swift */; };
 		14781268224959A900AE8E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14781266224959A900AE8E56 /* Main.storyboard */; };
@@ -39,6 +35,7 @@
 		14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B04429224EE1ED00762572 /* ConstantViewController.swift */; };
 		14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442B224EE3B100762572 /* EquationTableViewCell.swift */; };
 		14B0442F224EE66100762572 /* iosMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442E224EE66100762572 /* iosMath.m */; };
+		14B566B0225D3D10001C28C4 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B566AF225D3D10001C28C4 /* SpeedViewController.swift */; };
 		14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */; };
 		14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */; };
 		3FDB8669225758A40038A71B /* EquationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB8668225758A40038A71B /* EquationTextField.swift */; };
@@ -51,7 +48,6 @@
 		1414F02A224EAC41009F4E5F /* TextUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
 		1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationCollectionViewCell.swift; sourceTree = "<group>"; };
 		1414F02E224EC713009F4E5F /* BrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
-		1414F030224ECEAB009F4E5F /* TabWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabWrapperView.swift; sourceTree = "<group>"; };
 		1421F685224C06CE00D97EAB /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		1421F687224C084E00D97EAB /* Equations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equations.swift; sourceTree = "<group>"; };
 		1421F689224C29DE00D97EAB /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -60,10 +56,7 @@
 		14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		14691C642259342100107B39 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		14691C662259448200107B39 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
-		146A12662249781800CF4AED /* BrandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTextField.swift; sourceTree = "<group>"; };
 		146A1268224981B100CF4AED /* EquationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsViewController.swift; sourceTree = "<group>"; };
-		146A126B224982EF00CF4AED /* TabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
-		146A126D2249847800CF4AED /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		1478125F224959A900AE8E56 /* UnitConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14781262224959A900AE8E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14781264224959A900AE8E56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +74,7 @@
 		14B0442B224EE3B100762572 /* EquationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTableViewCell.swift; sourceTree = "<group>"; };
 		14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitConverter-Bridging-Header.h"; sourceTree = "<group>"; };
 		14B0442E224EE66100762572 /* iosMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosMath.m; sourceTree = "<group>"; };
+		14B566AF225D3D10001C28C4 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnitsViewController.swift; sourceTree = "<group>"; };
 		1E0BC3F6D7C6C684587E5EE1 /* Pods-UnitConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.debug.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,11 +109,7 @@
 		146A1265224977AB00CF4AED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				146A12662249781800CF4AED /* BrandTextField.swift */,
-				146A126B224982EF00CF4AED /* TabView.xib */,
 				1421F685224C06CE00D97EAB /* KeyboardView.xib */,
-				146A126D2249847800CF4AED /* TabView.swift */,
-				1414F030224ECEAB009F4E5F /* TabWrapperView.swift */,
 				1421F689224C29DE00D97EAB /* KeyboardView.swift */,
 				149573102256A48800474C09 /* KeyboardButton.swift */,
 				1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */,
@@ -187,6 +177,7 @@
 				146A1268224981B100CF4AED /* EquationsViewController.swift */,
 				14B04429224EE1ED00762572 /* ConstantViewController.swift */,
 				14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */,
+				14B566AF225D3D10001C28C4 /* SpeedViewController.swift */,
 				1487DECC2255389700F1F6D0 /* LiquidViewController.swift */,
 				14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */,
 			);
@@ -303,7 +294,6 @@
 				1487DED322554DB400F1F6D0 /* texgyretermes-math.otf in Resources */,
 				1478126D224959AA00AE8E56 /* LaunchScreen.storyboard in Resources */,
 				1478126A224959AA00AE8E56 /* Assets.xcassets in Resources */,
-				146A126C224982EF00CF4AED /* TabView.xib in Resources */,
 				14781268224959A900AE8E56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +360,7 @@
 				14631B49224FC60C00DFC5DE /* extensions.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
 				14691C652259342100107B39 /* TemperatureViewController.swift in Sources */,
+				14B566B0225D3D10001C28C4 /* SpeedViewController.swift in Sources */,
 				14691C672259448200107B39 /* AlertManager.swift in Sources */,
 				14631B4B224FC73300DFC5DE /* EquationsStoreManager.swift in Sources */,
 				146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */,
@@ -381,12 +372,9 @@
 				14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */,
 				1414F02D224EBA38009F4E5F /* EquationCollectionViewCell.swift in Sources */,
 				1487DECD2255389700F1F6D0 /* LiquidViewController.swift in Sources */,
-				1414F031224ECEAB009F4E5F /* TabWrapperView.swift in Sources */,
 				14631B4D224FCD9300DFC5DE /* HistoryTableViewCell.swift in Sources */,
-				146A126E2249847800CF4AED /* TabView.swift in Sources */,
 				1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */,
 				14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */,
-				146A12672249781800CF4AED /* BrandTextField.swift in Sources */,
 				14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */,
 				14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */,
 			);

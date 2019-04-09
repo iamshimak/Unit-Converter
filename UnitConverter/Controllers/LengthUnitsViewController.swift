@@ -9,12 +9,9 @@
 import UIKit
 
 class LengthUnitsViewController: UnitsViewController {
-    
-    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.setupKeyBoard(scrollView)
     }
     
     // MARK: Textfield Delegates

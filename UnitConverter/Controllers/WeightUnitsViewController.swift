@@ -10,11 +10,8 @@ import UIKit
 
 class WeightUnitsViewController: UnitsViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.setupKeyBoard(scrollView)
     }
     
     // MARK: Textfield Delegates

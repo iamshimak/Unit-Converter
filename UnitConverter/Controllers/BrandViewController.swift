@@ -9,17 +9,9 @@
 import UIKit
 
 class BrandViewController: UIViewController {
-    
-    var tabBar: TabView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tabBar = TabView.createTabView()
-    }
-    
-    func setupTabBarFrom(view: UIView) {
-        tabBar.frame = view.bounds
-        view.addSubview(tabBar)
     }
     
 

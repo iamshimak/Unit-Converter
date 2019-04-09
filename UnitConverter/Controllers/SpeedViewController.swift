@@ -1,14 +1,14 @@
 //
-//  TemperatureViewController.swift
+//  SpeedViewController.swift
 //  UnitConverter
 //
-//  Created by Suwadith Srithar on 4/7/19.
+//  Created by Suwadith Srithar on 4/10/19.
 //  Copyright © 2019 Ahamed Shimak. All rights reserved.
 //
 
 import UIKit
 
-class TemperatureViewController: UnitsViewController {
+class SpeedViewController: UnitsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +53,8 @@ class TemperatureViewController: UnitsViewController {
     
     override func onSaveButtonPressed() {
         let tempEquation = Equations.Temperature(celsius: getTextFieldValue(from: ViewTags.Temperature.celsiusText),
-                                                   fahrenheit: getTextFieldValue(from: ViewTags.Temperature.fahrenheitText),
-                                                   kelvin: getTextFieldValue(from: ViewTags.Temperature.kelvinText))
+                                                 fahrenheit: getTextFieldValue(from: ViewTags.Temperature.fahrenheitText),
+                                                 kelvin: getTextFieldValue(from: ViewTags.Temperature.kelvinText))
         EquationsStoreManager.save(tempEquation)
         AlertManager.showSaveAlert(self)
     }

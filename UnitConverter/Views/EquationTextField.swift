@@ -8,8 +8,11 @@
 
 import UIKit
 
-class EquationTextField: UITextField {
-
+@IBDesignable
+class EquationTextField: UITextField, UITextFieldDelegate {
+    
+    @IBInspectable var requireNegativeKey: Bool = false
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -21,7 +24,19 @@ class EquationTextField: UITextField {
     }
     
     func setup() {
+        self.delegate = self
         textAlignment = .right
+    }
+    
+    // MARK: - TextField helpers
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        KeyboardView.shared.show()
+        KeyboardView.shared.textField(for: textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        KeyboardView.shared.hide()
     }
 
 }

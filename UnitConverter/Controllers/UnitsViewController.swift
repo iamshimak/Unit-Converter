@@ -8,14 +8,17 @@
 
 import UIKit
 
-class UnitsViewController: BrandViewController, UITextFieldDelegate {
+class UnitsViewController: BrandViewController {
     
     var keyboardView: KeyboardView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItem()
         setupKeyboardHide()
+        setupKeyBoard(scrollView)
         
         navigationController?.navigationBar.prefersLargeTitles = true
         //TODO back button history name change
@@ -49,7 +52,7 @@ class UnitsViewController: BrandViewController, UITextFieldDelegate {
     }
     
     func setupKeyBoard(_ scrollView: UIScrollView) {
-        keyboardView = KeyboardView.createKeyboardView()
+        keyboardView = KeyboardView.shared
         keyboardView.scrollView = scrollView
         
         keyboardView.onNumberKeyPressed = { sign, number, pressedNumber, tag in
@@ -70,24 +73,6 @@ class UnitsViewController: BrandViewController, UITextFieldDelegate {
     }
     
     // MARK: - TextField helpers
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        keyboardView.show()
-        keyboardView.textField(for: textField)
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        keyboardView.hide()
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // TODO validations
-        let tag = textField.tag
-        let value = TextUtils.numberValue(for: textField.text, range: range, replaceString: string)
-        textfield(value: value, for: tag)
-        
-        return true
-    }
     
     func textfield(value: Float,for tag: Int) {}
     
