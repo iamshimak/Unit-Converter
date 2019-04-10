@@ -29,6 +29,9 @@ class WeightUnitsViewController: UnitsViewController {
             conValue = Equations.Weight.ounce(toGrams: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
             
+            conValue = Equations.Weight.ounce(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            
         case ViewTags.Weight.poundText:
             var conValue = Equations.Weight.pound(toOunce: value)
             updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
@@ -38,6 +41,9 @@ class WeightUnitsViewController: UnitsViewController {
             
             conValue = Equations.Weight.pound(toGram: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
+            
+            conValue = Equations.Weight.pound(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
             
         case ViewTags.Weight.kgText:
             var conValue = Equations.Weight.kg(toOunce: value)
@@ -49,6 +55,9 @@ class WeightUnitsViewController: UnitsViewController {
             conValue = Equations.Weight.kg(toGrams: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
             
+            conValue = Equations.Weight.kg(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            
         case ViewTags.Weight.gramText:
             var conValue = Equations.Weight.gram(toOunce: value)
             updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
@@ -58,6 +67,23 @@ class WeightUnitsViewController: UnitsViewController {
             
             conValue = Equations.Weight.gram(toKg: value)
             updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
+            
+            conValue = Equations.Weight.gram(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            
+        case ViewTags.Weight.stonesText:
+            var conValue = Equations.Weight.stone(toOunce: value)
+            updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
+            
+            conValue = Equations.Weight.stones(toPound: value)
+            updateTextField(tag: ViewTags.Weight.poundText, value: conValue)
+            
+            conValue = Equations.Weight.stones(toKg: value)
+            updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
+            
+            conValue = Equations.Weight.stones(toGrams: value)
+            updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
+            
         default:
             break
         }

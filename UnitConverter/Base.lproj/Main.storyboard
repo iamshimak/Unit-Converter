@@ -18,7 +18,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equationCell" id="hQ6-Em-xuY" customClass="EquationCollectionViewCell" customModule="UnitConverter" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="equationCell" id="hQ6-Em-xuY" customClass="EquationCollectionViewCell" customModule="Converter_" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="130" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -113,7 +113,7 @@
         <!--History-->
         <scene sceneID="jdP-4I-eTw">
             <objects>
-                <viewController title="History" id="kR3-Pg-KQY" customClass="HistoryViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="History" id="kR3-Pg-KQY" customClass="HistoryViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dWr-ZB-6wX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" id="2nk-cV-Bl7" customClass="HistoryTableViewCell" customModule="UnitConverter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" id="2nk-cV-Bl7" customClass="HistoryTableViewCell" customModule="Converter_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2nk-cV-Bl7" id="OY9-1n-P9V">
@@ -170,6 +170,28 @@
                                             <outlet property="titleLabel" destination="zsj-6h-TNh" id="Khs-Z7-85Y"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emptyCell" id="YAy-od-ILX">
+                                        <rect key="frame" x="0.0" y="101" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YAy-od-ILX" id="ufJ-rJ-U8T">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Not Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="z9S-80-NQy">
+                                                    <rect key="frame" x="10" y="10" width="394" height="79.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="z9S-80-NQy" firstAttribute="leading" secondItem="ufJ-rJ-U8T" secondAttribute="leading" constant="10" id="1qW-4c-q0f"/>
+                                                <constraint firstAttribute="trailing" secondItem="z9S-80-NQy" secondAttribute="trailing" constant="10" id="EXq-pD-kOP"/>
+                                                <constraint firstItem="z9S-80-NQy" firstAttribute="top" secondItem="ufJ-rJ-U8T" secondAttribute="top" constant="10" id="aOK-w6-nIE"/>
+                                                <constraint firstAttribute="bottom" secondItem="z9S-80-NQy" secondAttribute="bottom" constant="10" id="ft4-rE-LDi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="kR3-Pg-KQY" id="fg1-tu-4SR"/>
@@ -202,7 +224,7 @@
         <!--Formulas-->
         <scene sceneID="dNS-BM-RnP">
             <objects>
-                <viewController title="Formulas" id="Dnk-fE-NoC" customClass="ConstantViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Formulas" id="Dnk-fE-NoC" customClass="ConstantViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7D-16-gDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +233,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="constantCell" rowHeight="120" id="Uxi-Qi-bCp" customClass="EquationTableViewCell" customModule="UnitConverter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="constantCell" rowHeight="120" id="Uxi-Qi-bCp" customClass="EquationTableViewCell" customModule="Converter_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uxi-Qi-bCp" id="2bC-be-awH">
@@ -274,7 +296,7 @@
         <!--Weight-->
         <scene sceneID="FMj-xt-KJa">
             <objects>
-                <viewController title="Weight" id="eXr-Zj-b04" customClass="WeightUnitsViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weight" id="eXr-Zj-b04" customClass="WeightUnitsViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZT7-Rp-a77">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +313,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9A-9C-zpK" userLabel="ounceText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9A-9C-zpK" userLabel="ounceText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="45.666666666666671" width="374" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="ounceText"/>
                                                 <nil key="textColor"/>
@@ -304,7 +326,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZF-0x-3uJ" userLabel="poundText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZF-0x-3uJ" userLabel="poundText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="121" width="374" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="poundText"/>
                                                 <nil key="textColor"/>
@@ -317,7 +339,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8a-Fr-pgr" userLabel="kgText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8a-Fr-pgr" userLabel="kgText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="196.66666666666669" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -329,7 +351,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6aW-m2-VXL" userLabel="gramText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6aW-m2-VXL" userLabel="gramText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="272.66666666666669" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -341,7 +363,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YqP-eb-8Oh" userLabel="stonesText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YqP-eb-8Oh" userLabel="stonesText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="348.66666666666669" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -408,7 +430,7 @@
         <!--Temperature-->
         <scene sceneID="V79-F0-m9I">
             <objects>
-                <viewController title="Temperature" id="Dkc-vq-Kk9" customClass="TemperatureViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Temperature" id="Dkc-vq-Kk9" customClass="TemperatureViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzV-hu-ZmK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +447,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3f-yh-3na" userLabel="celsiusText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3f-yh-3na" userLabel="celsiusText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="35.666666666666671" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -440,7 +462,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-0M-7ch" userLabel="fahrenheitText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-0M-7ch" userLabel="fahrenheitText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="111.66666666666666" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -455,7 +477,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQy-lb-ujQ" userLabel="kelvinText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQy-lb-ujQ" userLabel="kelvinText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="187.66666666666666" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -515,7 +537,7 @@
         <!--Length-->
         <scene sceneID="DMP-nl-AH3">
             <objects>
-                <viewController title="Length" id="Zvr-ii-eGE" customClass="LengthUnitsViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Length" id="Zvr-ii-eGE" customClass="LengthUnitsViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xeg-8l-TOQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,7 +554,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1y-oJ-cZP" userLabel="meterText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1y-oJ-cZP" userLabel="meterText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="46" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -544,7 +566,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-O8-v7t" userLabel="mileText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-O8-v7t" userLabel="mileText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="122" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -556,7 +578,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYS-ng-BBV" userLabel="cmText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYS-ng-BBV" userLabel="cmText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="198" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -568,7 +590,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEl-l0-eZH" userLabel="mmText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEl-l0-eZH" userLabel="mmText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="274" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -580,7 +602,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9o-pL-Fge" userLabel="yardText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9o-pL-Fge" userLabel="yardText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="349.66666666666669" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -592,7 +614,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3005" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhX-v3-ccp" userLabel="inchText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3005" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhX-v3-ccp" userLabel="inchText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="425" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -664,7 +686,7 @@
         <!--Speed-->
         <scene sceneID="z35-nm-PbT">
             <objects>
-                <viewController title="Speed" id="M76-ND-RIL" customClass="SpeedViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Speed" id="M76-ND-RIL" customClass="SpeedViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f46-dI-dMB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -681,7 +703,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="4000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fi-DQ-HN3" userLabel="metersIntoSecText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="4000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fi-DQ-HN3" userLabel="metersIntoSecText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="46" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -693,7 +715,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="4001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-fO-rEj" userLabel="kmIntoHourText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="4001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-fO-rEj" userLabel="kmIntoHourText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="122" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -705,7 +727,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="4002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-zy-ktx" userLabel="milesIntoHourText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="4002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-zy-ktx" userLabel="milesIntoHourText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="198" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -717,7 +739,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="4003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-5v-sK1" userLabel="nMilesIntoHour" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="4003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-5v-sK1" userLabel="nMilesIntoHour" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="274" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -779,7 +801,7 @@
         <!--Liquid-->
         <scene sceneID="Hkj-j3-yAv">
             <objects>
-                <viewController title="Liquid" id="xv2-s1-Yzz" customClass="LiquidViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Liquid" id="xv2-s1-Yzz" customClass="LiquidViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iYm-fE-gIc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -796,7 +818,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="5000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imI-0v-da8" userLabel="gallonText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="5000" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imI-0v-da8" userLabel="gallonText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="46" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -808,7 +830,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="5001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-rh-HlK" userLabel="litreText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="5001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-rh-HlK" userLabel="litreText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="122" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -820,7 +842,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="5002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-KR-0Ez" userLabel="ukPintText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="5002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-KR-0Ez" userLabel="ukPintText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="198" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -832,7 +854,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="5003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-tF-z0U" userLabel="fluidOunceText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="5003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-tF-z0U" userLabel="fluidOunceText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="274" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -844,7 +866,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="5004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0k-Dn-dad" userLabel="millilitreText" customClass="EquationTextField" customModule="UnitConverter" customModuleProvider="target">
+                                            <textField opaque="NO" tag="5004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0k-Dn-dad" userLabel="millilitreText" customClass="EquationTextField" customModule="Converter_" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="350" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1019,7 +1041,7 @@
                                     <constraint firstItem="dbD-Am-gvY" firstAttribute="top" secondItem="3Yr-9B-Vke" secondAttribute="bottom" constant="5" id="ySF-Js-kEo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iuj-uT-sPC" userLabel="TabView" customClass="TabWrapperView" customModule="UnitConverter" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iuj-uT-sPC" userLabel="TabView" customClass="TabWrapperView" customModule="Converter_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="676" width="414" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.88940782679999997" blue="0.35978513420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

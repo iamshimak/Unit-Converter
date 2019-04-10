@@ -33,29 +33,36 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         switch sender.selectedSegmentIndex {
         case 0:
             val = EquationsStoreManager.retrieve(object: Equations.Weight.self).equationDictionary
+        case 1:
+            val = EquationsStoreManager.retrieve(object: Equations.Temperature.self).equationDictionary
         case 2:
             val = EquationsStoreManager.retrieve(object: Equations.Length.self).equationDictionary
+        case 3:
+            val = EquationsStoreManager.retrieve(object: Equations.Speed.self).equationDictionary
         case 4:
             val = EquationsStoreManager.retrieve(object: Equations.Liquid.self).equationDictionary
         default:
             break
         }
         
-        if let _val = val {
-            equationVals = _val
-            tableview.reloadData()
-        }
+        equationVals = val ?? [:]
+        tableview.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return equationVals.count
+        return equationVals.count == 0 ? 1 : equationVals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as! HistoryTableViewCell
-        cell.titleLabel.text = Array(equationVals)[indexPath.row].key
-        cell.equationLabel.text = String(describing: Array(equationVals)[indexPath.row].value)
-        return cell
+        if indexPath.row < equationVals.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as! HistoryTableViewCell
+            cell.titleLabel.text = Array(equationVals)[indexPath.row].key
+            cell.equationLabel.text = String(describing: Array(equationVals)[indexPath.row].value)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "emptyCell", for: indexPath)
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

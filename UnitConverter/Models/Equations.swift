@@ -101,6 +101,10 @@ extension Equations.Weight {
         return value * 28.34952
     }
     
+    static func ounce(toStones value: Float) -> Float {
+        return value / 224
+    }
+    
     static func pound(toOunce value: Float) -> Float {
         return value * 16
     }
@@ -111,6 +115,10 @@ extension Equations.Weight {
     
     static func pound(toGram value: Float) -> Float {
         return value * 453.59237
+    }
+    
+    static func pound(toStones value: Float) -> Float {
+        return value / 14
     }
     
     static func kg(toOunce value: Float) -> Float {
@@ -125,6 +133,10 @@ extension Equations.Weight {
         return value * 1000
     }
     
+    static func kg(toStones value: Float) -> Float {
+        return value / 6.35029318
+    }
+    
     static func gram(toOunce value: Float) -> Float {
         return value / 28.34952
     }
@@ -135,6 +147,26 @@ extension Equations.Weight {
     
     static func gram(toKg value: Float) -> Float {
         return value / 1000
+    }
+    
+    static func gram(toStones value: Float) -> Float {
+        return value / 6350.29318
+    }
+    
+    static func stone(toOunce value: Float) -> Float {
+        return value * 224
+    }
+    
+    static func stones(toPound value: Float) -> Float {
+        return value * 14
+    }
+    
+    static func stones(toKg value: Float) -> Float {
+        return value * 6.35029318
+    }
+    
+    static func stones(toGrams value: Float) -> Float {
+        return value * 6350.29318
     }
 }
 
