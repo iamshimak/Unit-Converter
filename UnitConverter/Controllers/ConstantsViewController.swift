@@ -2,7 +2,7 @@
 //  ConstantsViewController.swift
 //  UnitConverter
 //
-//  Created by Suwadith Srithar on 4/10/19.
+//  Created by Ahamed Shimak on 4/10/19.
 //  Copyright © 2019 Ahamed Shimak. All rights reserved.
 //
 

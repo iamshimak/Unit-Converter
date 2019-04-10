@@ -2,7 +2,7 @@
 //  HistoryViewController.swift
 //  UnitConverter
 //
-//  Created by Suwadith Srithar on 3/30/19.
+//  Created by Ahamed Shimak on 3/30/19.
 //  Copyright © 2019 Ahamed Shimak. All rights reserved.
 //
 

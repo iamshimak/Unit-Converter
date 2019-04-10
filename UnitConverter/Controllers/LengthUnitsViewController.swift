@@ -2,7 +2,7 @@
 //  LengthViewController.swift
 //  UnitConverter
 //
-//  Created by Suwadith Srithar on 3/31/19.
+//  Created by Ahamed Shimak on 3/31/19.
 //  Copyright © 2019 Ahamed Shimak. All rights reserved.
 //
 
