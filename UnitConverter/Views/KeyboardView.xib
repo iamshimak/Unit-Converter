@@ -129,7 +129,7 @@
                                 <action selector="numberKey:" destination="iN0-l3-epB" eventType="touchUpInside" id="1fa-Lu-Qgj"/>
                             </connections>
                         </button>
-                        <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmK-gc-RFk" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmK-gc-RFk" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
                             <rect key="frame" x="281.5" y="162" width="93.5" height="242.5"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -151,7 +151,7 @@
                                 <action selector="dotKey:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Nv-c6-w5p"/>
                             </connections>
                         </button>
-                        <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-hw-3R7" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-hw-3R7" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
                             <rect key="frame" x="281.5" y="162" width="93.5" height="242.5"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -162,7 +162,7 @@
                                 <action selector="clearKey:" destination="iN0-l3-epB" eventType="touchUpInside" id="ytk-4h-cmF"/>
                             </connections>
                         </button>
-                        <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqU-qR-2vi" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqU-qR-2vi" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
                             <rect key="frame" x="281.5" y="0.0" width="93.5" height="242.5"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -181,7 +181,7 @@
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                         </button>
-                        <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-al-p6Y" userLabel="Hide" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-al-p6Y" userLabel="Hide" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
                             <rect key="frame" x="281.5" y="404.5" width="93.5" height="242.5"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" image="KeyboardDownKey">

@@ -41,11 +41,6 @@ class KeyboardView: UIView {
         }
     }
     
-    var isOnDisplay = false
-    var isScrollViewShrinked = false
-    
-    var scrollView: UIScrollView?
-    
     var selectedTextField: UITextField?
     
     private var currentSign: Sign = .positive
@@ -68,10 +63,7 @@ class KeyboardView: UIView {
     
     // Initalize keyboard view
     func setup() {
-        let width = UIScreen.main.bounds.width
-        let height  = UIScreen.main.bounds.height
-        let kbHeight = width - 50
-        let modifieFframe = CGRect.init(x: 0, y: height - kbHeight, width: width, height: kbHeight)
+        let modifieFframe = CGRect.init(x: 0, y: 0, width: 0, height: 250)
         self.frame = modifieFframe
         //isHidden = true
         //hide()
@@ -172,53 +164,8 @@ class KeyboardView: UIView {
     }
     
     @IBAction func hideKey(_ sender: Any) {
-        hide()
-    }
-    
-    func show() {
-        isHidden = false
-        UIView.animate(withDuration: 0.3, animations: {
-            let kFrame = self.frame
-            let kHeight = UIScreen.main.bounds.height - KeyboardView.height
-            self.frame = CGRect(x: kFrame.minX, y: kHeight, width: kFrame.width, height: kFrame.height)
-        }) { finished in
-            
-        }
-        
-        // Logic to bring scrollview up to uitextfield
-        if let _scrollView = scrollView {
-            var viewFrame = _scrollView.frame
-            viewFrame.size.height -= UIScreen.main.bounds.height - KeyboardView.height
-            
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationBeginsFromCurrentState(true)
-            _scrollView.frame = viewFrame
-            UIView.commitAnimations()
-            
-            isOnDisplay = true
-        }
-    }
-    
-    func hide() {
-        UIView.animate(withDuration: 0.3, animations: {
-            let kFrame = self.frame
-            let kHeight = UIScreen.main.bounds.height
-            self.frame = CGRect(x: kFrame.minX, y: kHeight, width: kFrame.width, height: kFrame.height)
-        }) { finished in
-            self.isHidden = true
-        }
-        
-        // Logic to bring down scrollview
-        if let _scrollView = scrollView {
-            var viewFrame = _scrollView.frame
-            viewFrame.size.height += KeyboardView.height
-            
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationBeginsFromCurrentState(true)
-            _scrollView.frame = viewFrame
-            UIView.commitAnimations()
-            
-            isOnDisplay = false
+        if let textField = selectedTextField {
+            textField.endEditing(true)
         }
     }
     
