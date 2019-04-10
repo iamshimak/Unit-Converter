@@ -73,7 +73,8 @@ class KeyboardView: UIView {
         let kbHeight = width - 50
         let modifieFframe = CGRect.init(x: 0, y: height - kbHeight, width: width, height: kbHeight)
         self.frame = modifieFframe
-        hide()
+        //isHidden = true
+        //hide()
     }
     
     func textField(for texfield: UITextField) {
@@ -175,6 +176,7 @@ class KeyboardView: UIView {
     }
     
     func show() {
+        isHidden = false
         UIView.animate(withDuration: 0.3, animations: {
             let kFrame = self.frame
             let kHeight = UIScreen.main.bounds.height - KeyboardView.height
@@ -186,7 +188,7 @@ class KeyboardView: UIView {
         // Logic to bring scrollview up to uitextfield
         if let _scrollView = scrollView {
             var viewFrame = _scrollView.frame
-            viewFrame.size.height -= KeyboardView.height
+            viewFrame.size.height -= UIScreen.main.bounds.height - KeyboardView.height
             
             UIView.beginAnimations(nil, context: nil)
             UIView.setAnimationBeginsFromCurrentState(true)
@@ -203,7 +205,7 @@ class KeyboardView: UIView {
             let kHeight = UIScreen.main.bounds.height
             self.frame = CGRect(x: kFrame.minX, y: kHeight, width: kFrame.width, height: kFrame.height)
         }) { finished in
-            
+            self.isHidden = true
         }
         
         // Logic to bring down scrollview

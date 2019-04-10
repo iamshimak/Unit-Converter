@@ -34,7 +34,6 @@
 		1487DED5225559C600F1F6D0 /* texgyretermes-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */; };
 		149573112256A48800474C09 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149573102256A48800474C09 /* KeyboardButton.swift */; };
 		14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442B224EE3B100762572 /* EquationTableViewCell.swift */; };
-		14B0442F224EE66100762572 /* iosMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442E224EE66100762572 /* iosMath.m */; };
 		14B566B0225D3D10001C28C4 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B566AF225D3D10001C28C4 /* SpeedViewController.swift */; };
 		14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */; };
 		14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */; };
@@ -72,8 +71,6 @@
 		1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-italic.otf"; sourceTree = "<group>"; };
 		149573102256A48800474C09 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		14B0442B224EE3B100762572 /* EquationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTableViewCell.swift; sourceTree = "<group>"; };
-		14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitConverter-Bridging-Header.h"; sourceTree = "<group>"; };
-		14B0442E224EE66100762572 /* iosMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosMath.m; sourceTree = "<group>"; };
 		14B566AF225D3D10001C28C4 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnitsViewController.swift; sourceTree = "<group>"; };
@@ -159,8 +156,6 @@
 				14781269224959AA00AE8E56 /* Assets.xcassets */,
 				1478126B224959AA00AE8E56 /* LaunchScreen.storyboard */,
 				1478126E224959AA00AE8E56 /* Info.plist */,
-				14B0442E224EE66100762572 /* iosMath.m */,
-				14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */,
 				14631B48224FC60C00DFC5DE /* extensions.swift */,
 			);
 			path = UnitConverter;
@@ -355,7 +350,6 @@
 				14781265224959A900AE8E56 /* HomeViewController.swift in Sources */,
 				1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */,
 				1414F02F224EC713009F4E5F /* BrandViewController.swift in Sources */,
-				14B0442F224EE66100762572 /* iosMath.m in Sources */,
 				14781263224959A900AE8E56 /* AppDelegate.swift in Sources */,
 				14631B49224FC60C00DFC5DE /* extensions.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
@@ -533,7 +527,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sk.UnitConverter;
 				PRODUCT_NAME = "Converter+";
-				SWIFT_OBJC_BRIDGING_HEADER = "UnitConverter/UnitConverter-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -555,7 +549,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sk.UnitConverter;
 				PRODUCT_NAME = "Converter+";
-				SWIFT_OBJC_BRIDGING_HEADER = "UnitConverter/UnitConverter-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
