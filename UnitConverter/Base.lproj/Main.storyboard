@@ -224,7 +224,7 @@
         <!--Formulas-->
         <scene sceneID="dNS-BM-RnP">
             <objects>
-                <viewController title="Formulas" id="Dnk-fE-NoC" customClass="ConstantViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Formulas" id="Dnk-fE-NoC" customClass="ConstantsViewController" customModule="Converter_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7D-16-gDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

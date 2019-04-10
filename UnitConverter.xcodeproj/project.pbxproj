@@ -15,6 +15,7 @@
 		1421F688224C084E00D97EAB /* Equations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F687224C084E00D97EAB /* Equations.swift */; };
 		1421F68B224C3DFE00D97EAB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1421F689224C29DE00D97EAB /* KeyboardView.swift */; };
 		1421F68C224C429200D97EAB /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1421F685224C06CE00D97EAB /* KeyboardView.xib */; };
+		142FE152225DE44A004939BA /* ConstantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142FE151225DE44A004939BA /* ConstantsViewController.swift */; };
 		14631B49224FC60C00DFC5DE /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631B48224FC60C00DFC5DE /* extensions.swift */; };
 		14631B4B224FC73300DFC5DE /* EquationsStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */; };
 		14631B4D224FCD9300DFC5DE /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */; };
@@ -32,7 +33,6 @@
 		1487DED322554DB400F1F6D0 /* texgyretermes-math.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */; };
 		1487DED5225559C600F1F6D0 /* texgyretermes-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */; };
 		149573112256A48800474C09 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149573102256A48800474C09 /* KeyboardButton.swift */; };
-		14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B04429224EE1ED00762572 /* ConstantViewController.swift */; };
 		14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442B224EE3B100762572 /* EquationTableViewCell.swift */; };
 		14B0442F224EE66100762572 /* iosMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B0442E224EE66100762572 /* iosMath.m */; };
 		14B566B0225D3D10001C28C4 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B566AF225D3D10001C28C4 /* SpeedViewController.swift */; };
@@ -51,6 +51,7 @@
 		1421F685224C06CE00D97EAB /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		1421F687224C084E00D97EAB /* Equations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equations.swift; sourceTree = "<group>"; };
 		1421F689224C29DE00D97EAB /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		142FE151225DE44A004939BA /* ConstantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsViewController.swift; sourceTree = "<group>"; };
 		14631B48224FC60C00DFC5DE /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		14631B4A224FC73300DFC5DE /* EquationsStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsStoreManager.swift; sourceTree = "<group>"; };
 		14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		1487DED222554DB400F1F6D0 /* texgyretermes-math.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-math.otf"; sourceTree = "<group>"; };
 		1487DED4225559C600F1F6D0 /* texgyretermes-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyretermes-italic.otf"; sourceTree = "<group>"; };
 		149573102256A48800474C09 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
-		14B04429224EE1ED00762572 /* ConstantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.asm.arm; };
 		14B0442B224EE3B100762572 /* EquationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTableViewCell.swift; sourceTree = "<group>"; };
 		14B0442D224EE66000762572 /* UnitConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitConverter-Bridging-Header.h"; sourceTree = "<group>"; };
 		14B0442E224EE66100762572 /* iosMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosMath.m; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 				14781264224959A900AE8E56 /* HomeViewController.swift */,
 				14691C642259342100107B39 /* TemperatureViewController.swift */,
 				146A1268224981B100CF4AED /* EquationsViewController.swift */,
-				14B04429224EE1ED00762572 /* ConstantViewController.swift */,
+				142FE151225DE44A004939BA /* ConstantsViewController.swift */,
 				14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */,
 				14B566AF225D3D10001C28C4 /* SpeedViewController.swift */,
 				1487DECC2255389700F1F6D0 /* LiquidViewController.swift */,
@@ -360,6 +360,7 @@
 				14631B49224FC60C00DFC5DE /* extensions.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
 				14691C652259342100107B39 /* TemperatureViewController.swift in Sources */,
+				142FE152225DE44A004939BA /* ConstantsViewController.swift in Sources */,
 				14B566B0225D3D10001C28C4 /* SpeedViewController.swift in Sources */,
 				14691C672259448200107B39 /* AlertManager.swift in Sources */,
 				14631B4B224FC73300DFC5DE /* EquationsStoreManager.swift in Sources */,
@@ -374,7 +375,6 @@
 				1487DECD2255389700F1F6D0 /* LiquidViewController.swift in Sources */,
 				14631B4D224FCD9300DFC5DE /* HistoryTableViewCell.swift in Sources */,
 				1414F028224EAAFB009F4E5F /* UnitsViewController.swift in Sources */,
-				14B0442A224EE1ED00762572 /* ConstantViewController.swift in Sources */,
 				14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */,
 				14B0442C224EE3B100762572 /* EquationTableViewCell.swift in Sources */,
 			);
