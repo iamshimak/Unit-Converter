@@ -71,6 +71,20 @@ class Equations: Codable {
             self.kelvin = kelvin
         }
     }
+    
+    class Speed: Codable {
+        let metersInSec: Float
+        let kmInHour: Float
+        let milesInHour: Float
+        let nauticalMilesInHour: Float
+        
+        init(metersInSec: Float, kmInHour: Float, milesInHour: Float, nauticalMilesInHour: Float) {
+            self.metersInSec = metersInSec
+            self.kmInHour = kmInHour
+            self.milesInHour = milesInHour
+            self.nauticalMilesInHour = nauticalMilesInHour
+        }
+    }
 }
 
 extension Equations.Weight {
@@ -354,5 +368,55 @@ extension Equations.Temperature {
     
     static func kelvin(toFahrenheit value: Float) -> Float {
         return (value - 273.15) * 9/5 + 32
+    }
+}
+
+extension Equations.Speed {
+    static func metersInSec(toKmInHour value: Float) -> Float {
+        return value * 3.6
+    }
+    
+    static func metersInSec(toMilesInHour value: Float) -> Float {
+        return value * 2.237
+    }
+    
+    static func metersInSec(toNauticalMilesInHour value: Float) -> Float {
+        return value * 1.9438612860586
+    }
+    
+    static func kmInHour(toMetersInSec value: Float) -> Float {
+        return value / 3.6
+    }
+    
+    static func kmInHour(toMilesInHour value: Float) -> Float {
+        return value / 1.609344
+    }
+    
+    static func kmInHour(toNauticalMilesInHour value: Float) -> Float {
+        return value / 1.852
+    }
+    
+    static func milesInHour(toMetersInSec value: Float) -> Float {
+        return value / 2.237
+    }
+    
+    static func milesInHour(toKmHour value: Float) -> Float {
+        return value * 1.609344
+    }
+    
+    static func milesInHour(toNauticalMilesInHour value: Float) -> Float {
+        return value / 1.1507794480235
+    }
+    
+    static func nauticalMilesInHour(toMetersInSec value: Float) -> Float {
+        return value / 1.9438612860586
+    }
+    
+    static func nauticalMilesInHour(toKmInHour value: Float) -> Float {
+        return value * 1.852
+    }
+    
+    static func nauticalMilesInHour(toMilesInHour value: Float) -> Float {
+        return value * 1.1507794480235
     }
 }

@@ -119,7 +119,7 @@ class LengthUnitsViewController: UnitsViewController {
     }
     
     override func textFields() -> [Int] {
-        return []
+        return ViewTags.Length.lengthTexts
     }
     
     // MARK: Save model

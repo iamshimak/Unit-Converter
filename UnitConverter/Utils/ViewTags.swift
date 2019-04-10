@@ -35,6 +35,17 @@ class ViewTags {
         static let mmText: Int = 3003
         static let yardText: Int = 3004
         static let inchText: Int = 3005
+        
+        static let lengthTexts: [Int] = [3000, 3001, 3002, 3003, 3004, 3005]
+    }
+    
+    class Speed {
+        static let metersInSecText: Int = 4000
+        static let kmInHourText: Int = 4001
+        static let milesInHourText: Int = 4002
+        static let nauticalMilesInHourText: Int = 4003
+        
+        static let speedTexts: [Int] = [4000, 4001, 4002, 4003]
     }
     
     class Liquid {
@@ -43,5 +54,7 @@ class ViewTags {
         static let pintText: Int = 5002
         static let ounceText: Int = 5003
         static let milliliterText: Int = 5004
+        
+        static let liquidTexts: [Int] = [5000, 5001, 5002, 5003, 5004]
     }
 }

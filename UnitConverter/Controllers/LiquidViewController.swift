@@ -88,7 +88,7 @@ class LiquidViewController: UnitsViewController {
     }
     
     override func textFields() -> [Int] {
-        return []
+        return ViewTags.Liquid.liquidTexts
     }
     
     // MARK: Save model
