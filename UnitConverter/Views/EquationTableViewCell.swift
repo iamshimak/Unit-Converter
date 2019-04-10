@@ -14,7 +14,8 @@ class EquationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var equationLabel: UILabel!
-
+    @IBOutlet weak var unitLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -23,9 +24,10 @@ class EquationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func updateValues(title: String, attributedEquation: NSAttributedString) {
+    func updateValues(title: String, attributedEquation: NSAttributedString, unit: NSAttributedString) {
         titleLabel.text = title
         equationLabel.attributedText = attributedEquation
+        unitLabel.attributedText = unit
     }
 
 }

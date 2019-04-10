@@ -240,25 +240,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g8-FQ-zOw">
-                                                    <rect key="frame" x="10" y="10" width="33.666666666666664" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g8-FQ-zOw">
+                                                    <rect key="frame" x="10" y="9.9999999999999982" width="394" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="equation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYX-i0-tnB">
-                                                    <rect key="frame" x="10" y="41" width="394" height="69"/>
+                                                    <rect key="frame" x="9.9999999999999964" y="40.333333333333336" width="58.666666666666657" height="69.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="TeXGyreTermesMath-Regular" family="TeX Gyre Termes Math" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-hR-YWv">
+                                                    <rect key="frame" x="78.666666666666657" y="40.333333333333336" width="325.33333333333337" height="69.666666666666657"/>
                                                     <fontDescription key="fontDescription" name="TeXGyreTermesMath-Regular" family="TeX Gyre Termes Math" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="FYX-i0-tnB" secondAttribute="trailing" constant="10" id="EJw-WH-MBE"/>
+                                                <constraint firstItem="9Pz-hR-YWv" firstAttribute="leading" secondItem="FYX-i0-tnB" secondAttribute="trailing" constant="10" id="7Nb-fY-eEd"/>
                                                 <constraint firstItem="6g8-FQ-zOw" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="JJi-We-Ggz"/>
                                                 <constraint firstItem="FYX-i0-tnB" firstAttribute="leading" secondItem="2bC-be-awH" secondAttribute="leading" constant="10" id="cxU-op-Fh6"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6g8-FQ-zOw" secondAttribute="trailing" constant="10" id="mbm-nD-LID"/>
+                                                <constraint firstItem="9Pz-hR-YWv" firstAttribute="top" secondItem="6g8-FQ-zOw" secondAttribute="bottom" constant="10" id="e22-9X-VZd"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Pz-hR-YWv" secondAttribute="trailing" constant="10" id="iiD-5e-Aio"/>
+                                                <constraint firstAttribute="trailing" secondItem="6g8-FQ-zOw" secondAttribute="trailing" constant="10" id="mbm-nD-LID"/>
                                                 <constraint firstItem="6g8-FQ-zOw" firstAttribute="top" secondItem="2bC-be-awH" secondAttribute="top" constant="10" id="oBO-hz-rLb"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Pz-hR-YWv" secondAttribute="bottom" constant="10" id="oJz-tP-MZC"/>
                                                 <constraint firstItem="FYX-i0-tnB" firstAttribute="top" secondItem="6g8-FQ-zOw" secondAttribute="bottom" constant="10" id="sbw-2l-NOs"/>
                                                 <constraint firstAttribute="bottom" secondItem="FYX-i0-tnB" secondAttribute="bottom" constant="10" id="uhf-go-rMQ"/>
                                             </constraints>
@@ -266,6 +275,7 @@
                                         <connections>
                                             <outlet property="equationLabel" destination="FYX-i0-tnB" id="wKP-Jb-zFU"/>
                                             <outlet property="titleLabel" destination="6g8-FQ-zOw" id="JWy-lz-bTE"/>
+                                            <outlet property="unitLabel" destination="9Pz-hR-YWv" id="sEk-sf-bM0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
