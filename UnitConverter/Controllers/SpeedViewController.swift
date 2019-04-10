@@ -71,10 +71,11 @@ class SpeedViewController: UnitsViewController {
     // MARK: Save model
     
     override func onSaveButtonPressed() {
-        let tempEquation = Equations.Temperature(celsius: getTextFieldValue(from: ViewTags.Temperature.celsiusText),
-                                                 fahrenheit: getTextFieldValue(from: ViewTags.Temperature.fahrenheitText),
-                                                 kelvin: getTextFieldValue(from: ViewTags.Temperature.kelvinText))
-        EquationsStoreManager.save(tempEquation)
+        let speedEquation = Equations.Speed.init(metersInSec: getTextFieldValue(from: ViewTags.Speed.metersInSecText),
+                                                kmInHour: getTextFieldValue(from: ViewTags.Speed.kmInHourText),
+                                                milesInHour: getTextFieldValue(from: ViewTags.Speed.milesInHourText),
+                                                nauticalMilesInHour: getTextFieldValue(from: ViewTags.Speed.nauticalMilesInHourText))
+        EquationsStoreManager.save(speedEquation)
         AlertManager.showSaveAlert(self)
     }
 

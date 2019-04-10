@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -15,10 +16,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     let labelNames: [String] = ["Weight", "Temperature", "Length", "Speed", "Liquid"]
     let segueIdentifiers: [String] = ["weightSegue", "temperatureSegue", "lengthSegue", "speedSegue", "volumeSegue"]
     
-    private let sectionInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = GradientColor(.topToBottom,
+                                                         frame: view.frame,
+                                                         colors: [FlatYellowDark(), FlatWhite()])
     }
     
     override func viewWillAppear(_ animated: Bool) {

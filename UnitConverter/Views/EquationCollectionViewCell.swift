@@ -17,7 +17,7 @@ class EquationCollectionViewCell: UICollectionViewCell {
     
     static let gradientColors: [[UIColor]] = [
         [FlatMint(), FlatMintDark()],
-        [FlatYellow(), FlatYellowDark()],
+        [FlatOrange(), FlatOrangeDark()],
         [FlatSkyBlue(), FlatSkyBlueDark()],
         [FlatPink(), FlatPinkDark()],
         [FlatPurple(), FlatPurpleDark()]
