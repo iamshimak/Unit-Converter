@@ -13,7 +13,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var equationVals: [String: Float] = [:]
+    var equationVals: [String: Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,13 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // Retrieve object from UserDefaults and uodate current value
     @IBAction func onSegmentedValueChanged(_ sender: UISegmentedControl) {
-        var val: [String:Float]?
+        var val: [String: Any]?
         switch sender.selectedSegmentIndex {
         case 0:
             val = EquationsStoreManager.retrieve(object: Equations.Weight.self).equationDictionary
+            if val != nil {
+                val!["stones"] = [val!["stones"], val!["stone_pounds"]] as Any
+            }
         case 1:
             val = EquationsStoreManager.retrieve(object: Equations.Temperature.self).equationDictionary
         case 2:
@@ -55,10 +58,23 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row < equationVals.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as! HistoryTableViewCell
-            cell.titleLabel.text = Array(equationVals)[indexPath.row].key
-            cell.equationLabel.text = String(describing: Array(equationVals)[indexPath.row].value)
-            return cell
+            let equation = Array(equationVals)[indexPath.row]
+            
+            if equation.value is [Any] {
+                let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTwoLabelsTableViewCell.identifierr,
+                                                         for: indexPath) as! HistoryTwoLabelsTableViewCell
+                let vals = equation.value as! [Float]
+                cell.titleLabel.text = "Stones and Pounds"
+                cell.valueLabel.text = String(describing: vals[0])
+                cell.secondLabel.text = String(describing: vals[1])
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as! HistoryTableViewCell
+                
+                cell.titleLabel.text = equation.key
+                cell.valueLabel.text = String(describing: equation.value)
+                return cell
+            }
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "emptyCell", for: indexPath)
             return cell

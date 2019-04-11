@@ -87,12 +87,12 @@ class KeyboardView: UIView {
             
             if let textFieldText = textField.text,
                 let textFieldFormat = NumberFormatter().number(from: "\(textFieldText)\(numberKeyFormat)") {
+                textField.insertText(numberKey)
                 
                 onNumberKeyPressed!(currentSign,
                                     textFieldFormat.floatValue,
                                     numberKeyFormat.floatValue,
                                     textField.tag)
-                textField.insertText(numberKey)
             }
         }
     }

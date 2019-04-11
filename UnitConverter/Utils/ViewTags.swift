@@ -16,8 +16,9 @@ class ViewTags {
         static let kgText: Int = 1002
         static let gramText: Int = 1003
         static let stonesText: Int = 1004
+        static let sPoundText: Int = 1005
         
-        static let weightTexts: [Int] = [1000, 1001, 1002, 1003, 1004]
+        static let weightTexts: [Int] = [1000, 1001, 1002, 1003, 1004, 1005]
     }
     
     class Temperature {

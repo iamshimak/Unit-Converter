@@ -26,7 +26,7 @@ extension UserDefaults {
                 print("Couldnt decode object")
                 return nil
             }
-        }else {
+        } else {
             print("Couldnt find key")
             return nil
         }

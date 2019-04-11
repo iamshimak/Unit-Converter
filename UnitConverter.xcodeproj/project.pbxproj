@@ -22,6 +22,7 @@
 		14691C652259342100107B39 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14691C642259342100107B39 /* TemperatureViewController.swift */; };
 		14691C672259448200107B39 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14691C662259448200107B39 /* AlertManager.swift */; };
 		146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A1268224981B100CF4AED /* EquationsViewController.swift */; };
+		146C5523225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C5522225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift */; };
 		14781263224959A900AE8E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14781262224959A900AE8E56 /* AppDelegate.swift */; };
 		14781265224959A900AE8E56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14781264224959A900AE8E56 /* HomeViewController.swift */; };
 		14781268224959A900AE8E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14781266224959A900AE8E56 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		14691C642259342100107B39 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		14691C662259448200107B39 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		146A1268224981B100CF4AED /* EquationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsViewController.swift; sourceTree = "<group>"; };
+		146C5522225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
 		1478125F224959A900AE8E56 /* Converter+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Converter+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14781262224959A900AE8E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14781264224959A900AE8E56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */,
 				14B0442B224EE3B100762572 /* EquationTableViewCell.swift */,
 				14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */,
+				146C5522225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift */,
 				3FDB8668225758A40038A71B /* EquationTextField.swift */,
 			);
 			path = Views;
@@ -362,6 +365,7 @@
 				3FDB8669225758A40038A71B /* EquationTextField.swift in Sources */,
 				1414F026224EA8D9009F4E5F /* ViewTags.swift in Sources */,
 				1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */,
+				146C5523225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift in Sources */,
 				1421F688224C084E00D97EAB /* Equations.swift in Sources */,
 				149573112256A48800474C09 /* KeyboardButton.swift in Sources */,
 				14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */,

@@ -13,7 +13,7 @@ class HistoryTableViewCell: UITableViewCell {
     static let identifier = "historyCell"
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var equationLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

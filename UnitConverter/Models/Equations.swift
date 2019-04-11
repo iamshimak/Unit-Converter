@@ -15,14 +15,16 @@ class Equations: Codable {
         let pound: Float
         let kg: Float
         let gram: Float
-        let stone: Float
+        let stones: Float
+        let stone_pounds: Float
         
-        init(ounce: Float, pound: Float, kg: Float, gram: Float, stone: Float) {
+        init(ounce: Float, pound: Float, kg: Float, gram: Float, stones: Float, stone_pounds: Float) {
             self.ounce = ounce
             self.pound = pound
             self.kg = kg
             self.gram = gram
-            self.stone = stone
+            self.stones = stones
+            self.stone_pounds = stone_pounds
         }
     }
     
@@ -101,8 +103,8 @@ extension Equations.Weight {
         return value * 28.34952
     }
     
-    static func ounce(toStones value: Float) -> Float {
-        return value / 224
+    static func ounce(toStones value: Float) -> (Float, Float) {
+        return toStoneAndPounds(value / 224)
     }
     
     static func pound(toOunce value: Float) -> Float {
@@ -117,8 +119,8 @@ extension Equations.Weight {
         return value * 453.59237
     }
     
-    static func pound(toStones value: Float) -> Float {
-        return value / 14
+    static func pound(toStones value: Float) -> (Float, Float) {
+        return toStoneAndPounds(value / 14)
     }
     
     static func kg(toOunce value: Float) -> Float {
@@ -133,8 +135,8 @@ extension Equations.Weight {
         return value * 1000
     }
     
-    static func kg(toStones value: Float) -> Float {
-        return value / 6.35029318
+    static func kg(toStones value: Float) -> (Float, Float) {
+        return toStoneAndPounds(value / 6.35029318)
     }
     
     static func gram(toOunce value: Float) -> Float {
@@ -149,24 +151,28 @@ extension Equations.Weight {
         return value / 1000
     }
     
-    static func gram(toStones value: Float) -> Float {
-        return value / 6350.29318
+    static func gram(toStones value: Float) -> (Float, Float) {
+        return toStoneAndPounds(value / 6350.29318)
     }
     
-    static func stone(toOunce value: Float) -> Float {
-        return value * 224
+    static func stone(toOunce stone: Float, poundVal: Float) -> Float {
+        return stone * 224 + pound(toOunce: poundVal)
     }
     
-    static func stones(toPound value: Float) -> Float {
-        return value * 14
+    static func stones(toPound stone: Float, poundVal: Float) -> Float {
+        return stone * 14 + poundVal
     }
     
-    static func stones(toKg value: Float) -> Float {
-        return value * 6.35029318
+    static func stones(toKg stone: Float, poundVal: Float) -> Float {
+        return stone * 6.35029318 + pound(toKg: poundVal)
     }
     
-    static func stones(toGrams value: Float) -> Float {
-        return value * 6350.29318
+    static func stones(toGrams stone: Float, poundVal: Float) -> Float {
+        return stone * 6350.29318 + pound(toGram: poundVal)
+    }
+    
+    static func toStoneAndPounds(_ value: Float) -> (Float, Float) {
+        return (floor(value), value.truncatingRemainder(dividingBy: 1) * 14)
     }
 }
 

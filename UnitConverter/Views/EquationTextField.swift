@@ -26,10 +26,7 @@ class EquationTextField: UITextField, UITextFieldDelegate {
     }
     
     func setup() {
-        
-        
         self.delegate = self
-        //self.inputView = keyboardView
         textAlignment = .right
     }
     
@@ -40,12 +37,11 @@ class EquationTextField: UITextField, UITextFieldDelegate {
         self.inputView = keyboardView
         
         keyboardView.isNegativeKeyHidden = isNegativeKeyRequired
-        //KeyboardView.shared.show()
         keyboardView.textField(for: textField)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //KeyboardView.shared.hide()
+
     }
 
 }

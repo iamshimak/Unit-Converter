@@ -29,8 +29,9 @@ class WeightUnitsViewController: UnitsViewController {
             conValue = Equations.Weight.ounce(toGrams: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
             
-            conValue = Equations.Weight.ounce(toStones: value)
-            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            let stoneAndPound = Equations.Weight.ounce(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: stoneAndPound.0)
+            updateTextField(tag: ViewTags.Weight.sPoundText, value: stoneAndPound.1)
             
         case ViewTags.Weight.poundText:
             var conValue = Equations.Weight.pound(toOunce: value)
@@ -42,8 +43,9 @@ class WeightUnitsViewController: UnitsViewController {
             conValue = Equations.Weight.pound(toGram: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
             
-            conValue = Equations.Weight.pound(toStones: value)
-            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            let stoneAndPound = Equations.Weight.pound(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: stoneAndPound.0)
+            updateTextField(tag: ViewTags.Weight.sPoundText, value: stoneAndPound.1)
             
         case ViewTags.Weight.kgText:
             var conValue = Equations.Weight.kg(toOunce: value)
@@ -55,8 +57,9 @@ class WeightUnitsViewController: UnitsViewController {
             conValue = Equations.Weight.kg(toGrams: value)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
             
-            conValue = Equations.Weight.kg(toStones: value)
-            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            let stoneAndPound = Equations.Weight.kg(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: stoneAndPound.0)
+            updateTextField(tag: ViewTags.Weight.sPoundText, value: stoneAndPound.1)
             
         case ViewTags.Weight.gramText:
             var conValue = Equations.Weight.gram(toOunce: value)
@@ -68,20 +71,24 @@ class WeightUnitsViewController: UnitsViewController {
             conValue = Equations.Weight.gram(toKg: value)
             updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
             
-            conValue = Equations.Weight.gram(toStones: value)
-            updateTextField(tag: ViewTags.Weight.stonesText, value: conValue)
+            let stoneAndPound  = Equations.Weight.gram(toStones: value)
+            updateTextField(tag: ViewTags.Weight.stonesText, value: stoneAndPound.0)
+            updateTextField(tag: ViewTags.Weight.sPoundText, value: stoneAndPound.1)
             
-        case ViewTags.Weight.stonesText:
-            var conValue = Equations.Weight.stone(toOunce: value)
+        case ViewTags.Weight.stonesText, ViewTags.Weight.sPoundText:
+            let stone = getTextFieldValue(from: ViewTags.Weight.stonesText)
+            let sPound = getTextFieldValue(from: ViewTags.Weight.sPoundText)
+            
+            var conValue = Equations.Weight.stone(toOunce: stone, poundVal: sPound)
             updateTextField(tag: ViewTags.Weight.ounceText, value: conValue)
             
-            conValue = Equations.Weight.stones(toPound: value)
+            conValue = Equations.Weight.stones(toPound: stone, poundVal: sPound)
             updateTextField(tag: ViewTags.Weight.poundText, value: conValue)
             
-            conValue = Equations.Weight.stones(toKg: value)
+            conValue = Equations.Weight.stones(toKg: stone, poundVal: sPound)
             updateTextField(tag: ViewTags.Weight.kgText, value: conValue)
             
-            conValue = Equations.Weight.stones(toGrams: value)
+            conValue = Equations.Weight.stones(toGrams: stone, poundVal: sPound)
             updateTextField(tag: ViewTags.Weight.gramText, value: conValue)
             
         default:
@@ -100,7 +107,8 @@ class WeightUnitsViewController: UnitsViewController {
                                               pound: getTextFieldValue(from: ViewTags.Weight.poundText),
                                               kg: getTextFieldValue(from: ViewTags.Weight.kgText),
                                               gram: getTextFieldValue(from: ViewTags.Weight.gramText),
-                                              stone: getTextFieldValue(from: ViewTags.Weight.stonesText))
+                                              stones: getTextFieldValue(from: ViewTags.Weight.stonesText),
+                                              stone_pounds: getTextFieldValue(from: ViewTags.Weight.sPoundText))
         EquationsStoreManager.save(weightEquation)
         AlertManager.showSaveAlert(self)
     }
