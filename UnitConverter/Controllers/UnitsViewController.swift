@@ -96,7 +96,7 @@ class UnitsViewController: BrandViewController {
     
     func updateTextField(tag: Int, value: Float) {
         let textField : UITextField = self.view.viewWithTag(tag) as! UITextField
-        textField.text = String(describing: value)
+        textField.text = String(describing: value.rounded(toPlaces: 4))
     }
     
     func getTextFieldValue(from tag: Int) -> Float {
