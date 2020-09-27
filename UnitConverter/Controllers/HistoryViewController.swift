@@ -18,14 +18,14 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.sendActions(for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.title = "History"
         self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        segmentedControl.sendActions(for: .valueChanged)
     }
     
     // Retrieve object from UserDefaults and uodate current value
@@ -71,8 +71,14 @@ extension HistoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row < equationElements.count {
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM d, h:mm:ss a"
+            
+            let equation = equationElements[indexPath.row] as! Auditable
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: DateTableViewCell.identifier, for: indexPath) as! DateTableViewCell
-            cell.titleLabel.text = String(indexPath.row)
+            cell.titleLabel.text = dateFormatter.string(from: equation.savedDate)
             
             return cell
         } else {

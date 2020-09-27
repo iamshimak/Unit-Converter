@@ -10,7 +10,7 @@ import UIKit
 
 class EquationsStoreManager: NSObject {
     
-    static func insert<T: Codable>(_ equation: T) {
+    static func insert<T: Codable & Auditable>(_ equation: T) {        
         let queue = retrieve(object: T.self) ?? Queue<T>(numberOfSize: 5)
         queue.enqueue(equation)
         save(queue: queue)

@@ -8,15 +8,21 @@
 
 import UIKit
 
+protocol Auditable {
+    var savedDate: Date { get }
+}
+
 class Equations: Codable {
     
-    class Weight: Codable {
+    class Weight: Auditable, Codable {
         let ounce: Float
         let pound: Float
         let kg: Float
         let gram: Float
         let stones: Float
         let stone_pounds: Float
+        
+        let savedDate: Date
         
         init(ounce: Float, pound: Float, kg: Float, gram: Float, stones: Float, stone_pounds: Float) {
             self.ounce = ounce
@@ -25,16 +31,20 @@ class Equations: Codable {
             self.gram = gram
             self.stones = stones
             self.stone_pounds = stone_pounds
+            
+            self.savedDate = Date()
         }
     }
     
-    class Length: Codable {
+    class Length: Auditable, Codable {
         let meter: Float
         let mile: Float
         let cm: Float
         let mm: Float
         let yard: Float
         let inch: Float
+        
+        let savedDate: Date
         
         init(meter: Float, mile: Float, cm: Float, mm: Float, yard: Float, inch: Float) {
             self.meter = meter
@@ -43,15 +53,19 @@ class Equations: Codable {
             self.mm = mm
             self.yard = yard
             self.inch = inch
+            
+            self.savedDate = Date()
         }
     }
     
-    class Liquid: Codable {
+    class Liquid: Auditable, Codable {
         let gallon: Float
         let litre: Float
         let pint: Float
         let ounce: Float
         let milliliter: Float
+        
+        let savedDate: Date
         
         init(gallon: Float, litre: Float, pint: Float, ounce: Float, milliliter: Float) {
             self.gallon = gallon
@@ -59,32 +73,42 @@ class Equations: Codable {
             self.pint = pint
             self.ounce = ounce
             self.milliliter = milliliter
+            
+            self.savedDate = Date()
         }
     }
     
-    class Temperature: Codable {
+    class Temperature: Auditable, Codable {
         let celsius: Float
         let fahrenheit: Float
         let kelvin: Float
+        
+        let savedDate: Date
         
         init(celsius: Float, fahrenheit: Float, kelvin: Float) {
             self.celsius = celsius
             self.fahrenheit = fahrenheit
             self.kelvin = kelvin
+            
+            self.savedDate = Date()
         }
     }
     
-    class Speed: Codable {
+    class Speed: Auditable, Codable {
         let metersInSec: Float
         let kmInHour: Float
         let milesInHour: Float
         let nauticalMilesInHour: Float
+        
+        let savedDate: Date
         
         init(metersInSec: Float, kmInHour: Float, milesInHour: Float, nauticalMilesInHour: Float) {
             self.metersInSec = metersInSec
             self.kmInHour = kmInHour
             self.milesInHour = milesInHour
             self.nauticalMilesInHour = nauticalMilesInHour
+            
+            self.savedDate = Date()
         }
     }
 }

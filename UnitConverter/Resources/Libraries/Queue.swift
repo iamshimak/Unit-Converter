@@ -23,11 +23,19 @@ public class Queue<T: Codable>: Codable {
         return dequeueStack.isEmpty && enqueueStack.isEmpty
     }
     
+    var isFull: Bool {
+        return dequeueStack.count + enqueueStack.count >= numberOfSize
+    }
+    
     var peek: T? {
         return !dequeueStack.isEmpty ? dequeueStack.last : enqueueStack.first
     }
     
     func enqueue(_ element: T) {
+        if isFull {
+            _ = dequeue()
+        }
+        
         enqueueStack.append(element)
     }
     

@@ -17,7 +17,14 @@ class HistoryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        if equationVals["stones"] != nil {
+            equationVals["stones"] = [equationVals["stones"], equationVals["stone_pounds"]] as Any
+        }
+        
+        equationVals.removeValue(forKey: "savedDate")
     }
     
 }
