@@ -109,7 +109,8 @@ class WeightUnitsViewController: UnitsViewController {
                                               gram: getTextFieldValue(from: ViewTags.Weight.gramText),
                                               stones: getTextFieldValue(from: ViewTags.Weight.stonesText),
                                               stone_pounds: getTextFieldValue(from: ViewTags.Weight.sPoundText))
-        EquationsStoreManager.save(weightEquation)
+
+        EquationsStoreManager.insert(weightEquation)
         AlertManager.showSaveAlert(self)
     }
     

@@ -55,7 +55,8 @@ class TemperatureViewController: UnitsViewController {
         let tempEquation = Equations.Temperature(celsius: getTextFieldValue(from: ViewTags.Temperature.celsiusText),
                                                  fahrenheit: getTextFieldValue(from: ViewTags.Temperature.fahrenheitText),
                                                  kelvin: getTextFieldValue(from: ViewTags.Temperature.kelvinText))
-        EquationsStoreManager.save(tempEquation)
+        
+        EquationsStoreManager.insert(tempEquation)
         AlertManager.showSaveAlert(self)
     }
     

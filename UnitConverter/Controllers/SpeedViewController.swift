@@ -75,7 +75,8 @@ class SpeedViewController: UnitsViewController {
                                                 kmInHour: getTextFieldValue(from: ViewTags.Speed.kmInHourText),
                                                 milesInHour: getTextFieldValue(from: ViewTags.Speed.milesInHourText),
                                                 nauticalMilesInHour: getTextFieldValue(from: ViewTags.Speed.nauticalMilesInHourText))
-        EquationsStoreManager.save(speedEquation)
+        
+        EquationsStoreManager.insert(speedEquation)
         AlertManager.showSaveAlert(self)
     }
 

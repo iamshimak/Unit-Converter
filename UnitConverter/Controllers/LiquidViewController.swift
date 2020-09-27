@@ -99,7 +99,8 @@ class LiquidViewController: UnitsViewController {
                                               pint: getTextFieldValue(from: ViewTags.Liquid.pintText),
                                               ounce: getTextFieldValue(from: ViewTags.Liquid.ounceText),
                                               milliliter: getTextFieldValue(from: ViewTags.Liquid.milliliterText))
-        EquationsStoreManager.save(liquidEquation)
+        
+        EquationsStoreManager.insert(liquidEquation)
         AlertManager.showSaveAlert(self)
     }
 

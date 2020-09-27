@@ -131,8 +131,8 @@ class LengthUnitsViewController: UnitsViewController {
                                               mm: getTextFieldValue(from: ViewTags.Length.mmText),
                                               yard: getTextFieldValue(from: ViewTags.Length.yardText),
                                               inch: getTextFieldValue(from: ViewTags.Length.inchText))
-
-        EquationsStoreManager.save(lengthEquation)
+        
+        EquationsStoreManager.insert(lengthEquation)
         AlertManager.showSaveAlert(self)
     }
 

@@ -39,6 +39,9 @@
 		14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDD9224FDD3B00F9AC8B /* HistoryViewController.swift */; };
 		14FADDDC2250063400F9AC8B /* LengthUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FADDDB2250063400F9AC8B /* LengthUnitsViewController.swift */; };
 		3FDB8669225758A40038A71B /* EquationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB8668225758A40038A71B /* EquationTextField.swift */; };
+		8118D08D2520885C00EB8F3F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118D08C2520885C00EB8F3F /* Queue.swift */; };
+		8118D08F2520E1FF00EB8F3F /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118D08E2520E1FF00EB8F3F /* HistoryDetailViewController.swift */; };
+		8118D0912520E2B600EB8F3F /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118D0902520E2B600EB8F3F /* DateTableViewCell.swift */; };
 		89E3D2B60680E2833CEF4A0B /* Pods_UnitConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C816AC43AA82E9DF653E927B /* Pods_UnitConverter.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		1E0BC3F6D7C6C684587E5EE1 /* Pods-UnitConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.debug.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		27485D0727C884B8732658B8 /* Pods-UnitConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitConverter.release.xcconfig"; path = "Target Support Files/Pods-UnitConverter/Pods-UnitConverter.release.xcconfig"; sourceTree = "<group>"; };
 		3FDB8668225758A40038A71B /* EquationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTextField.swift; sourceTree = "<group>"; };
+		8118D08C2520885C00EB8F3F /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		8118D08E2520E1FF00EB8F3F /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		8118D0902520E2B600EB8F3F /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		C816AC43AA82E9DF653E927B /* Pods_UnitConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 				1421F689224C29DE00D97EAB /* KeyboardView.swift */,
 				149573102256A48800474C09 /* KeyboardButton.swift */,
 				1414F02C224EBA38009F4E5F /* EquationCollectionViewCell.swift */,
+				8118D0902520E2B600EB8F3F /* DateTableViewCell.swift */,
 				14B0442B224EE3B100762572 /* EquationTableViewCell.swift */,
 				14631B4C224FCD9300DFC5DE /* HistoryTableViewCell.swift */,
 				146C5522225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift */,
@@ -171,6 +178,7 @@
 				1414F02E224EC713009F4E5F /* BrandViewController.swift */,
 				1414F027224EAAFB009F4E5F /* UnitsViewController.swift */,
 				14781264224959A900AE8E56 /* HomeViewController.swift */,
+				8118D08E2520E1FF00EB8F3F /* HistoryDetailViewController.swift */,
 				14691C642259342100107B39 /* TemperatureViewController.swift */,
 				146A1268224981B100CF4AED /* EquationsViewController.swift */,
 				142FE151225DE44A004939BA /* ConstantsViewController.swift */,
@@ -193,6 +201,7 @@
 		1487DECE22554D6800F1F6D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8118D08B2520883900EB8F3F /* Libraries */,
 				1487DECF22554D8100F1F6D0 /* Fonts */,
 			);
 			path = Resources;
@@ -223,6 +232,14 @@
 				27485D0727C884B8732658B8 /* Pods-UnitConverter.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8118D08B2520883900EB8F3F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8118D08C2520885C00EB8F3F /* Queue.swift */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +369,7 @@
 				14631B49224FC60C00DFC5DE /* extensions.swift in Sources */,
 				1478127722496A7100AE8E56 /* WeightUnitsViewController.swift in Sources */,
 				14691C652259342100107B39 /* TemperatureViewController.swift in Sources */,
+				8118D0912520E2B600EB8F3F /* DateTableViewCell.swift in Sources */,
 				142FE152225DE44A004939BA /* ConstantsViewController.swift in Sources */,
 				14B566B0225D3D10001C28C4 /* SpeedViewController.swift in Sources */,
 				14691C672259448200107B39 /* AlertManager.swift in Sources */,
@@ -359,8 +377,10 @@
 				146A1269224981B100CF4AED /* EquationsViewController.swift in Sources */,
 				3FDB8669225758A40038A71B /* EquationTextField.swift in Sources */,
 				1414F026224EA8D9009F4E5F /* ViewTags.swift in Sources */,
+				8118D08F2520E1FF00EB8F3F /* HistoryDetailViewController.swift in Sources */,
 				1414F02B224EAC41009F4E5F /* TextUtils.swift in Sources */,
 				146C5523225EBCF300888582 /* HistoryTwoLabelsTableViewCell.swift in Sources */,
+				8118D08D2520885C00EB8F3F /* Queue.swift in Sources */,
 				1421F688224C084E00D97EAB /* Equations.swift in Sources */,
 				149573112256A48800474C09 /* KeyboardButton.swift in Sources */,
 				14FADDDA224FDD3B00F9AC8B /* HistoryViewController.swift in Sources */,
