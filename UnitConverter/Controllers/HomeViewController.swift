@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let labelNames: [String] = ["Weight", "Temperature", "Length", "Speed", "Liquid"]
@@ -19,8 +19,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = GradientColor(.topToBottom,
-                                                         frame: view.frame,
-                                                         colors: [FlatYellowDark(), FlatWhite()])
+                                                  frame: view.frame,
+                                                  colors: [FlatYellowDark(), FlatOrangeDark()])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +34,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     // MARK: - DataSource
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return labelNames.count
     }

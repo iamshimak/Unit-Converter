@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,10 +15,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-nm-Axp">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-op-goX" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="94" height="162"/>
+                            <rect key="frame" x="0.0" y="0.0" width="94" height="167"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="1">
@@ -31,7 +29,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayc-Kl-am2" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="94" y="0.0" width="93.5" height="162"/>
+                            <rect key="frame" x="94" y="0.0" width="93.5" height="167"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="2">
@@ -42,7 +40,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byq-OH-WX5" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="187.5" y="0.0" width="94" height="162"/>
+                            <rect key="frame" x="187.5" y="0.0" width="94" height="167"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="3">
@@ -53,7 +51,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md3-gB-L1r" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="162" width="94" height="161.5"/>
+                            <rect key="frame" x="0.0" y="167" width="94" height="166.5"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="4">
@@ -64,7 +62,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPR-XB-v2M" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="94" y="162" width="93.5" height="161.5"/>
+                            <rect key="frame" x="94" y="167" width="93.5" height="166.5"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="5">
@@ -75,7 +73,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-3P-InK" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="187.5" y="162" width="94" height="161.5"/>
+                            <rect key="frame" x="187.5" y="167" width="94" height="166.5"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="6">
@@ -86,7 +84,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-ld-79H" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="323.5" width="94" height="162"/>
+                            <rect key="frame" x="0.0" y="333.5" width="94" height="167"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="7">
@@ -97,7 +95,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjh-Wc-Dup" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="94" y="323.5" width="93.5" height="162"/>
+                            <rect key="frame" x="94" y="333.5" width="93.5" height="167"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="8">
@@ -108,7 +106,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwt-xA-2SG" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="187.5" y="323.5" width="94" height="162"/>
+                            <rect key="frame" x="187.5" y="333.5" width="94" height="167"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="9">
@@ -119,7 +117,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxS-pv-Onn" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="485.5" width="94" height="161.5"/>
+                            <rect key="frame" x="0.0" y="500.5" width="94" height="166.5"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="0">
@@ -130,7 +128,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmK-gc-RFk" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="281.5" y="162" width="93.5" height="242.5"/>
+                            <rect key="frame" x="281.5" y="167" width="93.5" height="250"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="-">
@@ -141,7 +139,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HE-Qu-hJA" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="94" y="485.5" width="93.5" height="161.5"/>
+                            <rect key="frame" x="94" y="500.5" width="93.5" height="166.5"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title=".">
@@ -152,7 +150,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-hw-3R7" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="281.5" y="162" width="93.5" height="242.5"/>
+                            <rect key="frame" x="281.5" y="167" width="93.5" height="250"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="C">
@@ -163,7 +161,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqU-qR-2vi" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="242.5"/>
+                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="250"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="CE">
@@ -174,7 +172,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxf-xy-24J" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="187.5" y="485.5" width="94" height="161.5"/>
+                            <rect key="frame" x="187.5" y="500.5" width="94" height="166.5"/>
                             <color key="backgroundColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal">
@@ -182,7 +180,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-al-p6Y" userLabel="Hide" customClass="KeyboardButton" customModule="Converter_" customModuleProvider="target">
-                            <rect key="frame" x="281.5" y="404.5" width="93.5" height="242.5"/>
+                            <rect key="frame" x="281.5" y="417" width="93.5" height="250"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" image="KeyboardDownKey">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -192,7 +190,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="PqU-qR-2vi" firstAttribute="top" secondItem="rn0-nm-Axp" secondAttribute="top" id="03u-6s-muu"/>
                         <constraint firstItem="PqU-qR-2vi" firstAttribute="width" secondItem="M8i-op-goX" secondAttribute="width" id="0Lz-sK-kfp"/>
@@ -264,7 +262,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="rn0-nm-Axp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Zi-Mw-aJq"/>
                 <constraint firstItem="rn0-nm-Axp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IWt-Ub-ocY"/>
@@ -277,6 +275,7 @@
                 <outlet property="negativeKey" destination="zmK-gc-RFk" id="uwP-mK-BK1"/>
                 <outlet property="negativeKeyTopConstraint" destination="UZv-oM-Sda" id="S1x-XS-7uX"/>
             </connections>
+            <point key="canvasLocation" x="138" y="153"/>
         </view>
     </objects>
     <resources>
