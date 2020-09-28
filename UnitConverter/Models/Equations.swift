@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol Auditable {
-    var savedDate: Date { get }
-}
-
 class Equations: Codable {
     
     class Weight: Auditable, Codable {

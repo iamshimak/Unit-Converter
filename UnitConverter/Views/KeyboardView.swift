@@ -12,7 +12,8 @@ class KeyboardView: UIView {
     
     @IBOutlet weak var negativeKey: KeyboardButton!
     @IBOutlet weak var negativeKeyTopConstraint: NSLayoutConstraint!
-    // Block methods to setup by other class
+    
+    /// Closure methods to setup by other class
     var onClearKeynPressed: (() -> Void)?
     var onClearAllKeyPressed: (() -> Void)?
     var onHideKeyPressed: (() -> Void)?
